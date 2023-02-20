@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/home_controller.dart';
+import 'package:groceries/screens/all_fruits_vegies.dart';
 import 'package:groceries/theme/themes_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -150,49 +151,58 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 15,vertical: 15),
-                child:  Text('Categories', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                child: Text(
+                  'Categories',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                ),
               ),
               Container(
                 width: double.infinity,
                 margin: const EdgeInsets.only(bottom: 25, left: 10, right: 10),
-                child: Card(
-                    elevation: 2,
-                    color: Colors.white,
-                    child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: ((context, index) {
-                          return ListTile(
-                              leading: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                        height: 70,
-                             width: 70,
-                           decoration: BoxDecoration(
-                             borderRadius: BorderRadius.circular(5),
-                            image: DecorationImage(
-                             image:AssetImage(carouselData[index].image),
-                             fit: BoxFit.cover)),
-                                  ),
-                              ),
-                              title: Text(carouselData[index].title),
-                              trailing: const Icon(Icons.arrow_forward_ios,size: 10,),
-                              );
-                        }),
-                        separatorBuilder: ((context, index) {
-                          return const Divider(
-                            height: 1,
-                          );
-                        }),
-                        itemCount: carouselData.length)),
-              ),
-             const Padding(
-                padding:  EdgeInsets.all(8.0),
-                child: Text('Chef\'s choice'),
+                child: ListView.separated(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: ((context, index) {
+                      return Card(
+                        color: Colors.white,
+                        child: ListTile(
+                          onTap: (() {
+                            if (carouselData[index].title ==
+                                'Fruits and Vegetables') {
+                              Get.to(const AllFruitsAndVegies(),transition: Transition.rightToLeft);
+                            }
+                          }),
+                          leading: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 100,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          carouselData[index].image),
+                                      fit: BoxFit.cover)),
+                            ),
+                          ),
+                          title: Text(carouselData[index].title),
+                          trailing: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 10,
+                          ),
+                        ),
+                      );
+                    }),
+                    separatorBuilder: ((context, index) {
+                      return const SizedBox(
+                        width: 5,
+                      );
+                    }),
+                    itemCount: carouselData.length),
               ),
               const Padding(
-                padding:  EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text('Let us help you cook'),
               ),
               // Image.asset("assets/images/trans_orange.png")
