@@ -23,7 +23,7 @@ class FoodItemWidget extends StatelessWidget {
             child: Container(
               height: 30,
               decoration: BoxDecoration(color: Colors.green.shade300, borderRadius: BorderRadius.circular(5)),
-            child: Center(child: const Text('ADD TO CART', style: TextStyle(color: Colors.white),)),
+            child: const Center(child: Text('ADD TO CART', style: TextStyle(color: Colors.white),)),
             ),
           )
         ]),
