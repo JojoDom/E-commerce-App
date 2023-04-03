@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:groceries/models/food_model.dart';
 
-import '../models/food_model.dart';
 import '../widgets/food_item_widget.dart';
 
-class AllFruitsAndVegies extends StatefulWidget {
-  const AllFruitsAndVegies({Key? key}) : super(key: key);
+class AllProteins extends StatefulWidget {
+  const AllProteins({Key? key}) : super(key: key);
 
   @override
-  State<AllFruitsAndVegies> createState() => _AllFruitsAndVegiesState();
+  State<AllProteins> createState() => _AllProteinsState();
 }
 
-class _AllFruitsAndVegiesState extends State<AllFruitsAndVegies> {
+class _AllProteinsState extends State<AllProteins> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.shade100,
       appBar: AppBar( 
-        title: const Text('Fruits & Vegies'),
+        title: const Text('Proteins'),
         elevation: 0,
         leading: IconButton(onPressed: (() => Get.back()), icon: const Icon(Icons.arrow_back_ios)),
         ),
-       body: Container(
-         margin:const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-         child: GridView.builder(
+        body: Container(
+        margin:const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        child: GridView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
-                    itemCount: fruitsVegiesData.length,
+                    itemCount: meats.length,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisExtent: 150,
@@ -35,10 +34,10 @@ class _AllFruitsAndVegiesState extends State<AllFruitsAndVegies> {
                     ),
                     itemBuilder: ((context, index) {
                       return FoodItemWidget(
-                        foodData: fruitsVegiesData[index],
+                        foodData: meats[index],
                       );
-                    })),
-       ),   
+                    })),  
+        ),
     );
   }
 }

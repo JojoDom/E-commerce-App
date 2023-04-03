@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/home_controller.dart';
 import 'package:groceries/screens/all_fruits_vegies.dart';
+import 'package:groceries/screens/all_proteins.dart';
 import 'package:groceries/theme/themes_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import '../../models/carousel_builder_modal.dart';
+import '../models/carousel_builder_modal.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -171,6 +172,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             if (carouselData[index].title ==
                                 'Fruits and Vegetables') {
                               Get.to(const AllFruitsAndVegies(),transition: Transition.rightToLeft);
+                            }else if (carouselData[index].title == 'Proteins'){
+                               Get.to(const AllProteins(),transition: Transition.rightToLeft);
                             }
                           }),
                           leading: Padding(

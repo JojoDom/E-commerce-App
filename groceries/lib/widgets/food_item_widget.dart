@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../models/fruits_and_vegetables_data.dart';
+import '../models/food_model.dart';
 
 class FoodItemWidget extends StatelessWidget {
   const FoodItemWidget({
-    Key? key, required this.fruitsVegiesData,
+    Key? key, required this.foodData,
   }) : super(key: key);
 
-  final FruitsVegiesData fruitsVegiesData;
+  final FoodsData foodData;
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,8 @@ class FoodItemWidget extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(children: [
-          Flexible(child: Image.asset(fruitsVegiesData.image)),
-          Text(fruitsVegiesData.title),
+          Flexible(child: Image.asset(foodData.image)),
+          Text(foodData.title),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
