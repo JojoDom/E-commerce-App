@@ -130,15 +130,15 @@ List<FoodsData> fruitsVegiesData = [
 List<FoodsData> meats = [
   FoodsData(
     title: 'Beef', 
-    image: 'assets/images/tuna.png', 
+    image: 'assets/images/beef.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Lamb', 
-    image: 'assets/images/proteins/trans_lamb.png', 
+    image: 'assets/images/trans_lamb.png', 
     categories: 'Proteins'),
     FoodsData(
-    title: 'Mutton', 
-    image: 'assets/images/proteins/trans_mutton.png', 
+    title: 'Goat Meat', 
+    image: 'assets/images/trans_goat_meat.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Pork', 
@@ -146,35 +146,23 @@ List<FoodsData> meats = [
     categories: 'Proteins'),
     FoodsData(
     title: 'Catfish', 
-    image: 'assets/images/proteins/trans_catfish.png', 
-    categories: 'Proteins'),
-    FoodsData(
-    title: 'Cheese', 
-    image: 'assets/images/proteins/trans_cheese.png', 
+    image: 'assets/images/catfish.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Chicken', 
-    image: 'assets/images/proteins/trans_chicken.png', 
+    image: 'assets/images/trans_chicken.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Crab', 
-    image: 'assets/images/proteins/trans_crab.png', 
+    image: 'assets/images/trans_crab.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Eggs', 
-    image: 'assets/images/proteins/trans_eggs.png', 
-    categories: 'Proteins'),
-    FoodsData(
-    title: 'Lobster', 
-    image: 'assets/images/proteins/trans_lobster.png', 
-    categories: 'Proteins'),
-    FoodsData(
-    title: 'Oyster', 
-    image: 'assets/images/proteins/trans_oyster.png', 
+    image: 'assets/images/eggs.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Prawns', 
-    image: 'assets/images/proteins/trans_prawns.png', 
+    image: 'assets/images/trans_prawns.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Salmon', 
@@ -190,7 +178,7 @@ List<FoodsData> meats = [
     categories: 'Proteins'),
     FoodsData(
     title: 'Turkey', 
-    image: 'assets/images/proteins/trans_turkey.png', 
+    image: 'assets/images/trans_turkey.png', 
     categories: 'Proteins'),
    
 ];

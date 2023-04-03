@@ -28,7 +28,7 @@ class _AllProteinsState extends State<AllProteins> {
                     itemCount: meats.length,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisExtent: 150,
+                      mainAxisExtent: 200,
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 10,
                     ),
