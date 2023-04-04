@@ -165,16 +165,16 @@ List<FoodsData> meats = [
     image: 'assets/images/trans_prawns.png', 
     categories: 'Proteins'),
     FoodsData(
+    title: 'Lobster', 
+    image: 'assets/images/trans_lobster.png', 
+    categories: 'Proteins'),
+    FoodsData(
     title: 'Salmon', 
-    image: 'assets/images/proteins/trans_salmon.png', 
+    image: 'assets/images/trans_salmon.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Tilapia', 
-    image: 'assets/images/proteins/trans_tilapia.png', 
-    categories: 'Proteins'),
-    FoodsData(
-    title: 'Tuna fish', 
-    image: 'assets/images/proteins/trans_tuna.png', 
+    image: 'assets/images/trans_tilapia.png', 
     categories: 'Proteins'),
     FoodsData(
     title: 'Turkey', 
