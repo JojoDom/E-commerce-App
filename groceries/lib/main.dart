@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:groceries/screens/home.dart';
+import 'package:groceries/dashboard/dashboard.dart';
+import 'package:groceries/screens/home/home.dart';
 import 'package:groceries/theme/themes.dart';
 import 'package:groceries/theme/themes_controller.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,
       themeMode: themeController.theme,
-      home: const MyHomePage(),
+      home: const Dashboard(),
     );
   }
 }
