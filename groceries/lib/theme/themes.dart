@@ -6,6 +6,6 @@ class Themes {
       brightness: Brightness.light,
       primary: Colors.yellow,
     ),
-  );
+  ).copyWith(primaryColor: Colors.yellow);
   static final darkTheme = ThemeData(colorScheme: const ColorScheme.dark());
 }
