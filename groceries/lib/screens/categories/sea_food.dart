@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:groceries/models/food_model.dart';
+import 'package:groceries/widgets/food_item_widget.dart';
 
-import '../widgets/food_item_widget.dart';
 
-class AllProteins extends StatefulWidget {
-  const AllProteins({Key? key}) : super(key: key);
+class SeaFood extends StatefulWidget {
+  const SeaFood({Key? key}) : super(key: key);
 
   @override
-  State<AllProteins> createState() => _AllProteinsState();
+  State<SeaFood> createState() => _SeaFoodState();
 }
 
-class _AllProteinsState extends State<AllProteins> {
+class _SeaFoodState extends State<SeaFood> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +18,7 @@ class _AllProteinsState extends State<AllProteins> {
       child: GridView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          itemCount: meats.length,
+          itemCount: seaFood.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisExtent: 200,
@@ -28,7 +27,7 @@ class _AllProteinsState extends State<AllProteins> {
           ),
           itemBuilder: ((context, index) {
             return FoodItemWidget(
-              foodData: meats[index],
+              foodData: seaFood[index],
             );
           })),
     );

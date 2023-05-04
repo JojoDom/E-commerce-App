@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../models/carousel_builder_modal.dart';
-import '../../all_proteins.dart';
+import '../../categories/meats.dart';
 
 class AllCategories extends StatefulWidget {
   const AllCategories({Key? key}) : super(key: key);

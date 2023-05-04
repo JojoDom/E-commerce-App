@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/home_controller.dart';
 import 'package:groceries/models/categories_data.dart';
-import 'package:groceries/screens/all_proteins.dart';
+import 'package:groceries/screens/categories/meats.dart';
 import 'package:groceries/screens/categories/fish.dart';
 import 'package:groceries/screens/categories/fruits.dart';
+import 'package:groceries/screens/categories/sea_food.dart';
 import 'package:groceries/screens/categories/veggies.dart';
 import 'package:groceries/screens/home/local_widgets/all_categories_widget.dart';
 import 'package:groceries/theme/themes_controller.dart';
@@ -73,6 +74,7 @@ class _HomeState extends State<Home> {
                         const SizedBox(width: 20)),
                     itemCount: categories.length),
               ),
+             const Divider(thickness: 2,),
               
               Obx(() =>  Expanded(                            
               child: categoryController.category.value == 'All'?
@@ -84,15 +86,15 @@ class _HomeState extends State<Home> {
               categoryController.category.value == 'FISH'?
               const Fish():
               categoryController.category.value == 'BAKES'?
-              const AllProteins():
+              const Meats():
               categoryController.category.value == 'MEAT'?
-              const AllProteins():
+              const Meats():
               categoryController.category.value == 'SEAFOOD'?
-              const AllProteins():
+              const SeaFood():
               categoryController.category.value == 'DIARY'?
-              const AllProteins():
+              const Meats():
               categoryController.category.value == 'CEREALS'? 
-              const AllProteins():              
+              const Meats():              
               const SizedBox())
               )  
             ],
