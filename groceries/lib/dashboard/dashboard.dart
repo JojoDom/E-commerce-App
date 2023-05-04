@@ -20,7 +20,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[0],
+      body: Obx(() => pages[controller.currentPageIndex.value]),
       floatingActionButton: SizedBox(
         height: 50,
         width: 50,
@@ -32,7 +32,7 @@ class _DashboardState extends State<Dashboard> {
             },
             fillColor: controller.currentPageIndex.value == 0
                 ? Colors.green
-                : Colors.lime,
+                : const Color.fromARGB(255, 230, 236, 231),
             shape: const CircleBorder(),
             elevation: 1.0,
             child: const Icon(
@@ -48,7 +48,7 @@ class _DashboardState extends State<Dashboard> {
       bottomNavigationBar: BottomAppBar(
         elevation: 4,
         shape: const CircularNotchedRectangle(),
-        notchMargin: 3,
+        notchMargin: 5,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
@@ -80,7 +80,7 @@ class BottomNavItem extends StatelessWidget {
         controller.currentPageIndex.value = index;
       },
       child: Obx(
-        () => Container(
+        () => SizedBox(
             height: 60,
             width: 60,
             child: Icon(
@@ -88,7 +88,7 @@ class BottomNavItem extends StatelessWidget {
               size: 35,
               color: index == controller.currentPageIndex.value
                   ? Theme.of(context).primaryColor
-                  : Colors.grey,
+                  :  const Color.fromARGB(255, 227, 227, 205),
             )),
       ),
     );

@@ -89,6 +89,26 @@ class _HomeState extends State<Home> {
           ),
           body: ListView(
             children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                child: Text(
+                  'Categories',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                CircleAvatar(
+                  backgroundColor: const Color.fromARGB(255, 227, 227, 205),
+                  radius: 30,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('assets/images/trans_fruits.png'),
+                  )),
+                  Text('Fruits')
+              ]),
               CarouselSlider.builder(
                 itemBuilder:
                     (BuildContext context, int index, int pageViewIndex) {
