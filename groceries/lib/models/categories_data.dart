@@ -8,7 +8,7 @@ class Categories {
 }
 
 List<Categories> categories = [
-  Categories(categoryName: 'All', image: '', key: 'All'),
+  Categories(categoryName: 'All', image: 'assets/images/trans_groceries_bag.png', key: 'All'),
   Categories(categoryName: 'Fruits', image: 'assets/images/trans_fruits.png', key: 'FRUITS'),
   Categories(categoryName: 'Veggies', image: 'assets/images/trans_veggies.png', key: 'VEGGIES'),
   Categories(categoryName: 'Fish', image: 'assets/images/trans_fish.png', key: 'FISH'),
@@ -16,6 +16,6 @@ List<Categories> categories = [
   Categories(categoryName: 'Meat', image: 'assets/images/trans_meat.png', key: 'MEAT'),
   Categories(categoryName: 'Sea Food', image: 'assets/images/trans_sea-food.png', key: 'SEAFOOD'),
   Categories(categoryName: 'Diary', image: 'assets/images/trans_diary.png', key: 'DIARY'),
-  Categories(categoryName: 'Cereals', image: 'assets/iamges/trans_cereals.png', key: 'CEREALS')
+  Categories(categoryName: 'Cereals', image: 'assets/images/trans_cereals.png', key: 'CEREALS')
 
 ];

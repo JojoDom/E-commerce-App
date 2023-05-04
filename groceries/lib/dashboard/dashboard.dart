@@ -15,7 +15,7 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  List<Widget> pages = const [Home(), Favorites(), Cart(), Account(), Search()];
+  List<Widget> pages = const [Home(), Favorites(), Cart(),  Search(),Account()];
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class _DashboardState extends State<Dashboard> {
             SizedBox(width: 10),
             BottomNavItem(icon: Icons.favorite, index: 1),
             BottomNavItem(index: 2, icon: Icons.shopping_cart),
-            BottomNavItem(index: 3, icon: Icons.shopping_bag),
+            BottomNavItem(index: 3, icon: Icons.search),
             BottomNavItem(index: 4, icon: Icons.person)
           ],
         ),
