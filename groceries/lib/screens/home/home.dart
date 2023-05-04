@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/home_controller.dart';
 import 'package:groceries/models/categories_data.dart';
-import 'package:groceries/screens/all_fruits_vegies.dart';
 import 'package:groceries/screens/all_proteins.dart';
+import 'package:groceries/screens/categories/fish.dart';
+import 'package:groceries/screens/categories/fruits.dart';
+import 'package:groceries/screens/categories/veggies.dart';
 import 'package:groceries/screens/home/local_widgets/all_categories_widget.dart';
 import 'package:groceries/theme/themes_controller.dart';
 import '../../controllers/category_controller.dart';
@@ -76,11 +78,11 @@ class _HomeState extends State<Home> {
               child: categoryController.category.value == 'All'?
               const AllCategories(): 
               categoryController.category.value == 'FRUITS'?
-              const AllFruitsAndVegies():
+              const Fruits():
               categoryController.category.value == 'VEGGIES'?
-              const AllFruitsAndVegies():
+              const Veggies():
               categoryController.category.value == 'FISH'?
-              const AllProteins():
+              const Fish():
               categoryController.category.value == 'BAKES'?
               const AllProteins():
               categoryController.category.value == 'MEAT'?

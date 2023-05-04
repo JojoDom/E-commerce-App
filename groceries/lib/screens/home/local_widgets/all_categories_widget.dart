@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../models/carousel_builder_modal.dart';
-import '../../all_fruits_vegies.dart';
 import '../../all_proteins.dart';
 
 class AllCategories extends StatefulWidget {
@@ -87,62 +86,8 @@ class _AllCategoriesState extends State<AllCategories> {
                   pauseAutoPlayOnTouch: false,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                child: Text(
-                  'Categories',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                margin: const EdgeInsets.only(bottom: 25, left: 10, right: 10),
-                child: ListView.separated(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: ((context, index) {
-                      return Card(
-                        color: Colors.white,
-                        child: ListTile(
-                          onTap: (() {
-                            if (carouselData[index].title ==
-                                'Fruits and Vegetables') {
-                              Get.to(const AllFruitsAndVegies(),
-                                  transition: Transition.rightToLeft);
-                            } else if (carouselData[index].title ==
-                                'Proteins') {
-                              Get.to(const AllProteins(),
-                                  transition: Transition.rightToLeft);
-                            }
-                          }),
-                          leading: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 100,
-                              width: 80,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  image: DecorationImage(
-                                      image:
-                                          AssetImage(carouselData[index].image),
-                                      fit: BoxFit.cover)),
-                            ),
-                          ),
-                          title: Text(carouselData[index].title),
-                          trailing: const Icon(
-                            Icons.arrow_forward_ios,
-                            size: 10,
-                          ),
-                        ),
-                      );
-                    }),
-                    separatorBuilder: ((context, index) {
-                      return const SizedBox(
-                        width: 5,
-                      );
-                    }),
-                    itemCount: carouselData.length),
-              ),
+              
+              
       ],
     );
   }

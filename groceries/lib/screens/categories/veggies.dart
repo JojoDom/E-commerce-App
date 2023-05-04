@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import '../models/food_model.dart';
-import '../widgets/food_item_widget.dart';
+import 'package:groceries/widgets/food_item_widget.dart';
 
-class AllFruitsAndVegies extends StatefulWidget {
-  const AllFruitsAndVegies({Key? key}) : super(key: key);
+import '../../models/food_model.dart';
+
+class Veggies extends StatefulWidget {
+  const Veggies({Key? key}) : super(key: key);
 
   @override
-  State<AllFruitsAndVegies> createState() => _AllFruitsAndVegiesState();
+  State<Veggies> createState() => _VeggiesState();
 }
 
-class _AllFruitsAndVegiesState extends State<AllFruitsAndVegies> {
+class _VeggiesState extends State<Veggies> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +18,7 @@ class _AllFruitsAndVegiesState extends State<AllFruitsAndVegies> {
       child: GridView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          itemCount: fruitsVegiesData.length,
+          itemCount: veggies.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             mainAxisExtent: 150,
@@ -26,7 +27,7 @@ class _AllFruitsAndVegiesState extends State<AllFruitsAndVegies> {
           ),
           itemBuilder: ((context, index) {
             return FoodItemWidget(
-              foodData: fruitsVegiesData[index],
+              foodData: veggies[index],
             );
           })),
     );
