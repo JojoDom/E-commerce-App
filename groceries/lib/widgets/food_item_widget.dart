@@ -58,24 +58,46 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
               top: 0,
               right: 0,
               child: Visibility(
-                child: Container(
-                  height: 30,
-                  width: 30,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.green),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
+                visible: widget.foodData.favAndCart[1],
+                child: InkWell(
+                  onTap: () {
+                    if (widget.foodData.favAndCart[1]) {
+                      setState(() {
+                        widget.foodData.favAndCart[1] = false;
+                      });
+                      cartController.cart.removeWhere(
+                          (element) => element.title == widget.foodData.title);
+                      cartController.update();
+                    }
+                  },
+                  child: Container(
+                    height: 30,
+                    width: 30,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.red),
+                    child: const Icon(
+                      Icons.remove,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-                replacement: Container(
-                  height: 30,
-                  width: 30,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.red),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
+                replacement: InkWell(
+                  onTap: () {
+                    setState(() {
+                      widget.foodData.favAndCart[1] = true;
+                    });
+                    cartController.cart.add(widget.foodData);
+                    cartController.update();
+                  },
+                  child: Container(
+                    height: 30,
+                    width: 30,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.green),
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -85,23 +107,23 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
                 right: 0,
                 child: InkWell(
                   onTap: () {
-                    if (widget.foodData.favorite[0]) {
+                    if (widget.foodData.favAndCart[0]) {
                       setState(() {
-                        widget.foodData.favorite[0] = false;
+                        widget.foodData.favAndCart[0] = false;
                       });
                       favoritesController.favorites.removeWhere(
                           (element) => element.title == widget.foodData.title);
-                    favoritesController.update();
+                      favoritesController.update();
                     } else {
                       setState(() {
-                        widget.foodData.favorite[0] = true;
+                        widget.foodData.favAndCart[0] = true;
                       });
                       favoritesController.favorites.add(widget.foodData);
                       favoritesController.update();
                     }
                   },
                   child: Icon(Icons.favorite,
-                      color: widget.foodData.favorite[0] == false
+                      color: widget.foodData.favAndCart[0] == false
                           ? Colors.grey
                           : Colors.yellow),
                 ))

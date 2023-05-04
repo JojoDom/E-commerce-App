@@ -6,14 +6,14 @@ class FoodsData {
   final int? quantity;
   final String price;
   final String? measuringUnit;
-  final List<bool> favorite;
+  final List<bool> favAndCart;
 
   FoodsData( 
       {required this.title,
       required this.price,
       this.quantity,
       this.measuringUnit,
-      required this.favorite,
+      required this.favAndCart,
       required this.image,
       required this.categories});
 }
@@ -26,14 +26,14 @@ List<FoodsData> fruits = [
       categories: 'FRUITS',
       price: ' GHS 1',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Avocado',
       image: 'assets/images/trans_avocado.png',
       categories: 'FRUITS',
       price: ' GHS 1',
-      favorite: [false],
+      favAndCart: [false, false],
       measuringUnit: 'kg',
       quantity: 0),
   FoodsData(
@@ -42,7 +42,7 @@ List<FoodsData> fruits = [
       categories: 'FRUITS',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Berries',
@@ -50,7 +50,7 @@ List<FoodsData> fruits = [
       categories: 'FRUITS',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Grapes',
@@ -58,14 +58,14 @@ List<FoodsData> fruits = [
       categories: 'FRUITS',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Mango',
       image: 'assets/images/trans_mango.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
-      favorite: [false],
+      favAndCart: [false, false],
       measuringUnit: 'kg',
       quantity: 0),
   FoodsData(
@@ -73,7 +73,7 @@ List<FoodsData> fruits = [
       image: 'assets/images/trans_orange.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
-      favorite: [false],
+      favAndCart: [false, false],
       measuringUnit: 'kg',
       quantity: 0),
   FoodsData(
@@ -81,7 +81,7 @@ List<FoodsData> fruits = [
       image: 'assets/images/trans_watermelon.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
-      favorite: [false],
+      favAndCart: [false, false],
       measuringUnit: 'kg',
       quantity: 0),
 ];
@@ -93,7 +93,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Bell Pepper',
@@ -101,7 +101,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Broccoli',
@@ -109,7 +109,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Cabbage',
@@ -117,7 +117,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Carrots',
@@ -125,7 +125,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Cauliflower',
@@ -133,7 +133,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Cucumber',
@@ -141,7 +141,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Pineapple',
@@ -149,7 +149,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'GreenPeas',
@@ -157,7 +157,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Lemon',
@@ -165,7 +165,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Lettuce',
@@ -173,7 +173,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Okro',
@@ -181,7 +181,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Onion',
@@ -189,7 +189,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Pepper',
@@ -197,7 +197,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
   FoodsData(
       title: 'Tomatoes',
@@ -205,7 +205,7 @@ List<FoodsData> veggies = [
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0),
 ];
 
@@ -215,7 +215,7 @@ List<FoodsData> fish = [
       image: 'assets/images/catfish.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'FISH'),
   FoodsData(
@@ -223,7 +223,7 @@ List<FoodsData> fish = [
       image: 'assets/images/trans_salmon.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'FISH'),
   FoodsData(
@@ -231,7 +231,7 @@ List<FoodsData> fish = [
       image: 'assets/images/trans_tilapia.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
 ];
@@ -242,7 +242,7 @@ List<FoodsData> seaFood = [
       image: 'assets/images/trans_crab.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'SEAFOOD'),
   FoodsData(
@@ -250,7 +250,7 @@ List<FoodsData> seaFood = [
       image: 'assets/images/trans_prawns.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'SEAFOOD'),
   FoodsData(
@@ -258,7 +258,7 @@ List<FoodsData> seaFood = [
       image: 'assets/images/trans_lobster.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'SEAFOOD'),
 ];
@@ -270,14 +270,14 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       quantity: 0,
-      favorite: [false],
+      favAndCart: [false, false],
       categories: 'Proteins'),
   FoodsData(
       title: 'Lamb',
       image: 'assets/images/trans_lamb.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
   FoodsData(
@@ -285,7 +285,7 @@ List<FoodsData> meats = [
       image: 'assets/images/trans_goat_meat.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
   FoodsData(
@@ -293,7 +293,7 @@ List<FoodsData> meats = [
       image: 'assets/images/trans_pork.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
   FoodsData(
@@ -301,7 +301,7 @@ List<FoodsData> meats = [
       image: 'assets/images/trans_chicken.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
   FoodsData(
@@ -309,7 +309,7 @@ List<FoodsData> meats = [
       image: 'assets/images/eggs.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
   FoodsData(
@@ -317,7 +317,7 @@ List<FoodsData> meats = [
       image: 'assets/images/trans_turkey.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      favorite: [false],
+      favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
 ];
