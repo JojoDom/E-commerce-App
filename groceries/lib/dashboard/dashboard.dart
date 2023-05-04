@@ -94,7 +94,7 @@ class BottomNavItem extends StatelessWidget {
                       ? Colors.green
                       :  const Color.fromARGB(255, 227, 227, 205),
                 ),
-                 cartController.cart.isNotEmpty && index == 2?
+                 cartController.cart.isNotEmpty && (index == 2 )?
             Positioned(
               top: 3,
               right: 3,
@@ -105,7 +105,18 @@ class BottomNavItem extends StatelessWidget {
                       shape: BoxShape.circle, color: Colors.red),
                   child: Center(child: Text(cartController.cart.length.toString(), style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white),))
                 ),
-            ) : const SizedBox()
+            ) :  favoritesController.favorites.isNotEmpty && (index == 1 )?
+            Positioned(
+              top: 3,
+              right: 3,
+              child: Container(
+                  height: 20,
+                  width: 20,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.red),
+                  child: Center(child: Text(favoritesController.favorites.length.toString(), style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white),))
+                ),
+            ): const SizedBox()
               ],
             )),
       ),
