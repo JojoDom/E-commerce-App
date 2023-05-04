@@ -14,30 +14,23 @@ class AllProteins extends StatefulWidget {
 class _AllProteinsState extends State<AllProteins> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar( 
-        title: const Text('Proteins'),
-        elevation: 0,
-        leading: IconButton(onPressed: (() => Get.back()), icon: const Icon(Icons.arrow_back_ios)),
-        ),
-        body: Container(
-        margin:const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-        child: GridView.builder(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.vertical,
-                    itemCount: meats.length,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisExtent: 200,
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10,
-                    ),
-                    itemBuilder: ((context, index) {
-                      return FoodItemWidget(
-                        foodData: meats[index],
-                      );
-                    })),  
-        ),
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      child: GridView.builder(
+          shrinkWrap: true,
+          scrollDirection: Axis.vertical,
+          itemCount: meats.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisExtent: 200,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+          ),
+          itemBuilder: ((context, index) {
+            return FoodItemWidget(
+              foodData: meats[index],
+            );
+          })),
     );
   }
 }
