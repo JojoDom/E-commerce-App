@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/dashboard_controller.dart';
+import 'package:groceries/global_variables/global_variables.dart';
 import 'package:groceries/screens/account/account.dart';
 import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
@@ -52,7 +53,7 @@ class _DashboardState extends State<Dashboard> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
-            SizedBox(width: 10),
+            SizedBox(width: 15),
             BottomNavItem(icon: Icons.favorite, index: 1),
             BottomNavItem(index: 2, icon: Icons.shopping_cart),
             BottomNavItem(index: 3, icon: Icons.search),
@@ -83,12 +84,29 @@ class BottomNavItem extends StatelessWidget {
         () => SizedBox(
             height: 60,
             width: 60,
-            child: Icon(
-              icon,
-              size: 35,
-              color: index == controller.currentPageIndex.value
-                  ? Colors.green
-                  :  const Color.fromARGB(255, 227, 227, 205),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Icon(
+                  icon,
+                  size: 35,
+                  color: index == controller.currentPageIndex.value
+                      ? Colors.green
+                      :  const Color.fromARGB(255, 227, 227, 205),
+                ),
+                 cartController.cart.isNotEmpty && index == 2?
+            Positioned(
+              top: 3,
+              right: 3,
+              child: Container(
+                  height: 20,
+                  width: 20,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.red),
+                  child: Center(child: Text(cartController.cart.length.toString(), style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white),))
+                ),
+            ) : const SizedBox()
+              ],
             )),
       ),
     );
