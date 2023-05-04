@@ -87,7 +87,7 @@ class BottomNavItem extends StatelessWidget {
               icon,
               size: 35,
               color: index == controller.currentPageIndex.value
-                  ? Theme.of(context).primaryColor
+                  ? Colors.green
                   :  const Color.fromARGB(255, 227, 227, 205),
             )),
       ),

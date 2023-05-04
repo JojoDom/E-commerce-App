@@ -44,7 +44,8 @@ class _HomeState extends State<Home> {
             title: const ListTile(
               title: Text('Hey'),
               subtitle: Text('Start shopping!'),
-            ),            
+            ), 
+            backgroundColor: Colors.green,           
             elevation: 0,
           ),
           body: Column(
