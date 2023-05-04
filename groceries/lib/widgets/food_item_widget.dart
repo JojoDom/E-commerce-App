@@ -89,6 +89,9 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
                       setState(() {
                         widget.foodData.favorite[0] = false;
                       });
+                      favoritesController.favorites.removeWhere(
+                          (element) => element.title == widget.foodData.title);
+                    favoritesController.update();
                     } else {
                       setState(() {
                         widget.foodData.favorite[0] = true;
