@@ -23,7 +23,7 @@ showNotification({String? title, String? body, String? route, String? image}) {
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: IconButton(
                 onPressed: () {
-                  //Get.back();
+                  Get.back();
                   Get.toNamed('/$route');
                 },
                 icon: const Icon(
