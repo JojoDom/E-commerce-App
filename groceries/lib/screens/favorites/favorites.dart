@@ -19,6 +19,7 @@ class _FavoritesState extends State<Favorites> {
        centerTitle: true,
        elevation: 0,
        backgroundColor: Colors.green,
+       leading: IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_back_ios)),
      ),
      body: Obx(() => 
         Container(

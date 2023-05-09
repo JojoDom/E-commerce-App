@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/dashboard_controller.dart';
@@ -7,6 +8,7 @@ import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/home/home.dart';
 import 'package:groceries/screens/search/search.dart';
+import 'package:groceries/utilities/routes.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -16,7 +18,42 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  List<Widget> pages = const [Home(), Favorites(), Cart(),  Search(),Account()];
+  List<Widget> pages = const [Home(), Favorites(), Cart(), Search(), Account()];
+
+  
+
+  Future<void> setupInteractedMessage() async {
+    // Get any messages which caused the application to open from
+    // a terminated state.
+    RemoteMessage? initialMessage =
+        await FirebaseMessaging.instance.getInitialMessage();
+
+    if (initialMessage != null) {
+      _handleMessage(initialMessage);
+    }
+
+    // Also handle any interaction when the app is in the background via a
+    // Stream listener
+    FirebaseMessaging.onMessageOpenedApp.listen(_handleMessage);
+  }
+
+  void _handleMessage(RemoteMessage message) {
+    RemoteNotification? notification = message.notification;
+    if (message.data["message"] == 'favorites') {
+      Get.toNamed(Routes.FAVORITES);
+    }
+    print("notification: $notification");
+    print("message data: ${message.data}");
+  }
+
+  @override
+  void initState() {
+    setupInteractedMessage();
+    super.initState();
+
+    // Run code required to handle interacted messages in an async function
+    // as initState() must not be async
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +62,8 @@ class _DashboardState extends State<Dashboard> {
       floatingActionButton: SizedBox(
         height: 50,
         width: 50,
-        child: Obx(() => 
-           RawMaterialButton(
+        child: Obx(
+          () => RawMaterialButton(
             onPressed: () {
               controller.currentPageIndex.value = 0;
               pages[0];
@@ -92,31 +129,46 @@ class BottomNavItem extends StatelessWidget {
                   size: 35,
                   color: index == controller.currentPageIndex.value
                       ? Colors.green
-                      :  const Color.fromARGB(255, 227, 227, 205),
+                      : const Color.fromARGB(255, 227, 227, 205),
                 ),
-                 cartController.cart.isNotEmpty && (index == 2 )?
-            Positioned(
-              top: 3,
-              right: 3,
-              child: Container(
-                  height: 20,
-                  width: 20,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.red),
-                  child: Center(child: Text(cartController.cart.length.toString(), style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white),))
-                ),
-            ) :  favoritesController.favorites.isNotEmpty && (index == 1 )?
-            Positioned(
-              top: 3,
-              right: 3,
-              child: Container(
-                  height: 20,
-                  width: 20,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.red),
-                  child: Center(child: Text(favoritesController.favorites.length.toString(), style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white),))
-                ),
-            ): const SizedBox()
+                cartController.cart.isNotEmpty && (index == 2)
+                    ? Positioned(
+                        top: 3,
+                        right: 3,
+                        child: Container(
+                            height: 20,
+                            width: 20,
+                            decoration: const BoxDecoration(
+                                shape: BoxShape.circle, color: Colors.red),
+                            child: Center(
+                                child: Text(
+                              cartController.cart.length.toString(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall!
+                                  .copyWith(color: Colors.white),
+                            ))),
+                      )
+                    : favoritesController.favorites.isNotEmpty && (index == 1)
+                        ? Positioned(
+                            top: 3,
+                            right: 3,
+                            child: Container(
+                                height: 20,
+                                width: 20,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle, color: Colors.red),
+                                child: Center(
+                                    child: Text(
+                                  favoritesController.favorites.length
+                                      .toString(),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodySmall!
+                                      .copyWith(color: Colors.white),
+                                ))),
+                          )
+                        : const SizedBox()
               ],
             )),
       ),
