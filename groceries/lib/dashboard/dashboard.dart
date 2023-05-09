@@ -9,6 +9,7 @@ import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/home/home.dart';
 import 'package:groceries/screens/search/search.dart';
 import 'package:groceries/utilities/routes.dart';
+import 'package:groceries/widgets/show_notification.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   List<Widget> pages = const [Home(), Favorites(), Cart(), Search(), Account()];
 
-  
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   Future<void> setupInteractedMessage() async {
     // Get any messages which caused the application to open from
@@ -29,30 +30,40 @@ class _DashboardState extends State<Dashboard> {
         await FirebaseMessaging.instance.getInitialMessage();
 
     if (initialMessage != null) {
-      _handleMessage(initialMessage);
+      _handleMessageBackground(initialMessage);
     }
 
     // Also handle any interaction when the app is in the background via a
     // Stream listener
-    FirebaseMessaging.onMessageOpenedApp.listen(_handleMessage);
+    FirebaseMessaging.onMessageOpenedApp.listen(_handleMessageBackground);
   }
 
-  void _handleMessage(RemoteMessage message) {
+  void _handleMessageBackground(RemoteMessage message) {
     RemoteNotification? notification = message.notification;
-    if (message.data["message"] == 'favorites') {
-      Get.toNamed(Routes.FAVORITES);
+    if (message.data["screen"] != null) {
+      Get.toNamed('/${message.data["screen"]}');
     }
+
     print("notification: $notification");
     print("message data: ${message.data}");
+  }
+
+  void _handleMessageForeGround(RemoteMessage message) {
+    RemoteNotification? notification = message.notification;
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+     
+      print("notification: $notification");
+      print("message data: ${message.data}");
+
+      // flutterLocalNotificationsPlugin?.show(notification.hashCode,
+      //      notification?.title, notification?.body, const NotificationDetails());
+    });
   }
 
   @override
   void initState() {
     setupInteractedMessage();
     super.initState();
-
-    // Run code required to handle interacted messages in an async function
-    // as initState() must not be async
   }
 
   @override
