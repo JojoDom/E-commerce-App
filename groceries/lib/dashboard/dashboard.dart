@@ -8,8 +8,6 @@ import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/home/home.dart';
 import 'package:groceries/screens/search/search.dart';
-import 'package:groceries/utilities/routes.dart';
-import 'package:groceries/widgets/show_notification.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
