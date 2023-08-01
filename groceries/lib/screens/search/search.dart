@@ -11,6 +11,7 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  int i = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,8 @@ class _SearchState extends State<Search> {
           actions: [
             InkWell(
               onTap: () {
-                fruits.add(veggies[0]);
+                fruits.insert(0, veggies[i++]);
+                setState(() {});
               },
               child: Container(
                 height: 30,
@@ -36,22 +38,6 @@ class _SearchState extends State<Search> {
             const SizedBox(
               width: 10,
             ),
-            InkWell(
-              onTap: () {},
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 30,
-                  width: 30,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.red),
-                  child: const Icon(
-                    Icons.remove,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
         body: Padding(
@@ -66,6 +52,27 @@ class _SearchState extends State<Search> {
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(5)),
                   child: Image.asset(fruits[index].image),
+                ),
+                trailing: InkWell(
+                  onTap: () {
+                    fruits.remove(fruits[index]);
+                    setState(() {
+                      
+                    });
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.red),
+                      child: const Icon(
+                        Icons.remove,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
                 ),
               );
             }),
