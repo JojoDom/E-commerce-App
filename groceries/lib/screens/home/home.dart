@@ -57,6 +57,7 @@ class _HomeState extends State<Home> {
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Text(
                   'Categories',
+                  textScaleFactor: 1.0,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ),
