@@ -46,7 +46,6 @@ class _SearchState extends State<Search> {
     return CardItem(
       animation: animation,
       item: item,
-      // No gesture detector here: we don't want removed items to be interactive.
     );
   }
 
