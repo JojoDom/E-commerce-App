@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
              const Divider(thickness: 2,),
               
               Obx(() =>  Expanded(                            
-              child: categoryController.category.value == 'All'?
+              child: categoryController.category.value == 'Popular'?
               const AllCategories(): 
               categoryController.category.value == 'FRUITS'?
               const Fruits():

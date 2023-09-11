@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class CategoryController extends GetxController {
-  var category = 'All'.obs;
+  var category = 'Popular'.obs;
   var isFavorite = false.obs;
 
   switchCategories(String categoryKey) {

@@ -1,4 +1,3 @@
-
 class FoodsData {
   final String title;
   final String image;
@@ -8,7 +7,7 @@ class FoodsData {
   final String? measuringUnit;
   final List<bool> favAndCart;
 
-  FoodsData( 
+  FoodsData(
       {required this.title,
       required this.price,
       this.quantity,
@@ -17,7 +16,6 @@ class FoodsData {
       required this.image,
       required this.categories});
 }
-
 
 List<FoodsData> fruits = [
   FoodsData(
@@ -320,4 +318,99 @@ List<FoodsData> meats = [
       favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
+];
+
+List<FoodsData> all = [
+  FoodsData(
+      title: 'Pork',
+      image: 'assets/images/trans_pork.png',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0,
+      categories: 'Proteins'),
+  FoodsData(
+      title: 'Chicken',
+      image: 'assets/images/trans_chicken.png',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0,
+      categories: 'Proteins'),
+  FoodsData(
+      title: 'Apples',
+      image: 'assets/images/trans_apple.png',
+      categories: 'FRUITS',
+      price: ' GHS 1',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0),
+      FoodsData(
+      title: 'Beef',
+      image: 'assets/images/beef.png',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      quantity: 0,
+      favAndCart: [false, false],
+      categories: 'Proteins'),
+      FoodsData(
+      title: 'Banana',
+      image: 'assets/images/trans_banana.png',
+      categories: 'FRUITS',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0),
+
+      FoodsData(
+      title: 'Tomatoes',
+      image: 'assets/images/trans_tomatoe.png',
+      categories: 'VEGGIES',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0),
+
+      FoodsData(
+      title: 'Pepper',
+      image: 'assets/images/trans_pepper.png',
+      categories: 'VEGGIES',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0),
+
+      FoodsData(
+      title: 'Onion',
+      image: 'assets/images/trans_onion.png',
+      categories: 'VEGGIES',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0),
+      FoodsData(
+      title: 'Okro',
+      image: 'assets/images/trans_okro.png',
+      categories: 'VEGGIES',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0),
+      FoodsData(
+      title: 'Tilapia',
+      image: 'assets/images/trans_tilapia.png',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0,
+      categories: 'Proteins'),
+      FoodsData(
+      title: 'Salmon',
+      image: 'assets/images/trans_salmon.png',
+      price: ' GHS 1.50',
+      measuringUnit: 'kg',
+      favAndCart: [false, false],
+      quantity: 0,
+      categories: 'FISH'),
+
 ];

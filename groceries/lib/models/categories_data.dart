@@ -8,7 +8,7 @@ class Categories {
 }
 
 List<Categories> categories = [
-  Categories(categoryName: 'All', image: 'assets/images/trans_groceries_bag.png', key: 'All'),
+  Categories(categoryName: 'Popular', image: 'assets/images/trans_groceries_bag.png', key: 'Popular'),
   Categories(categoryName: 'Fruits', image: 'assets/images/trans_fruits.png', key: 'FRUITS'),
   Categories(categoryName: 'Veggies', image: 'assets/images/trans_veggies.png', key: 'VEGGIES'),
   Categories(categoryName: 'Fish', image: 'assets/images/trans_fish.png', key: 'FISH'),
