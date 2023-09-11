@@ -27,7 +27,7 @@ class CategoriesWidget extends StatelessWidget {
           children: [
             Obx(() => 
              CircleAvatar(
-                  backgroundColor:  categoryKey== categoryController.category.value?   Colors.white: const Color(0xFFE3E3CD),
+                  backgroundColor:  categoryKey== categoryController.category.value?   Colors.yellow: const Color(0xFFE3E3CD),
                   radius: 30,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),

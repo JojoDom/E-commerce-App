@@ -42,7 +42,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Banana',
-      color: const Color(0xFFFFFF00),
+      color: Colors.yellow,
       image: 'assets/images/trans_banana.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -60,7 +60,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Grapes',
-      color: const Color(0xFF6B2E38),
+      color: const Color(0xFF008000),
       image: 'assets/images/trans_grapes.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -399,7 +399,7 @@ List<FoodsData> all = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Banana',
-       color: const Color(0xFFFFFF00),
+       color:  Colors.yellow,
       image: 'assets/images/trans_banana.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',

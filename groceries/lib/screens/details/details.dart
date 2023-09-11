@@ -30,7 +30,7 @@ class _DetailsState extends State<Details> {
             onPressed: () => Get.back(),
             icon: const Icon(
               Icons.arrow_back_ios,
-              color: Colors.black,
+              color: Colors.white,
             )),
         elevation: 0,
       ),

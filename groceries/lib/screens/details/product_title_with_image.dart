@@ -12,6 +12,7 @@ class ProductTitleWithImage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             foodsData.title,
@@ -26,7 +27,7 @@ class ProductTitleWithImage extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   children: [
-                    const TextSpan(text: "Price\n"),
+                    const TextSpan(text: " Price\n"),
                     TextSpan(
                       text: '${foodsData.price}/${foodsData.measuringUnit}',
                       style: Theme.of(context).textTheme.headline4!.copyWith(
