@@ -45,37 +45,44 @@ class _HomeState extends State<Home> {
       child: Scaffold(
           appBar: AppBar(
             title: const ListTile(
-              title: Text('Hey'),
-              subtitle: Text('Start shopping!'),
+              title: Text('Hey', style: TextStyle(color: Colors.white),),
+              subtitle: Text('Start shopping!',style: TextStyle(color: Colors.white),),
             ), 
             backgroundColor: Colors.green,           
             elevation: 0,
           ),
           body: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Text(
-                  'Categories',
-                  textScaleFactor: 1.0,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              Container(
+                color: Colors.green,
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      child: Text(
+                        'Categories',
+                        textScaleFactor: 1.0,
+                        style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500, color: Colors.white),
+                      ),
+                    ),
+                     Container(
+                  height: 100,
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      itemBuilder: ((context, index) => CategoriesWidget(
+                          image: categories[index].image,
+                          categoryName: categories[index].categoryName,
+                          categoryKey: categories[index].key)),
+                      separatorBuilder: ((context, index) =>
+                          const SizedBox(width: 20)),
+                      itemCount: categories.length),
+                ),                         
+                  ],
                 ),
               ),
-              Container(
-                height: 100,
-                margin: const EdgeInsets.symmetric(horizontal: 20),
-                child: ListView.separated(
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    itemBuilder: ((context, index) => CategoriesWidget(
-                        image: categories[index].image,
-                        categoryName: categories[index].categoryName,
-                        categoryKey: categories[index].key)),
-                    separatorBuilder: ((context, index) =>
-                        const SizedBox(width: 20)),
-                    itemCount: categories.length),
-              ),
-             const Divider(thickness: 2,),
+             
               
               Obx(() =>  Expanded(                            
               child: categoryController.category.value == 'Popular'?
