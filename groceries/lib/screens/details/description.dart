@@ -12,6 +12,12 @@ class Description extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+     return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 20),
+      child: Text(
+       foodsData.description??'',
+        style: const TextStyle(height: 1.5, color: Colors.grey, fontWeight: FontWeight.w400, fontSize: 14),
+      ),
+    );
   }
 }

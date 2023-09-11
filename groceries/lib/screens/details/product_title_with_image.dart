@@ -30,7 +30,7 @@ class ProductTitleWithImage extends StatelessWidget {
                     const TextSpan(text: " Price\n"),
                     TextSpan(
                       text: '${foodsData.price}/${foodsData.measuringUnit}',
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                      style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ],
