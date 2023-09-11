@@ -14,7 +14,5 @@ List<Categories> categories = [
   Categories(categoryName: 'Fish', image: 'assets/images/trans_fish.png', key: 'FISH'),
   Categories(categoryName: 'Meat', image: 'assets/images/trans_meat.png', key: 'MEAT'),
   Categories(categoryName: 'Sea Food', image: 'assets/images/trans_sea-food.png', key: 'SEAFOOD'),
-  Categories(categoryName: 'Diary', image: 'assets/images/trans_diary.png', key: 'DIARY'),
-  Categories(categoryName: 'Cereals', image: 'assets/images/trans_cereals.png', key: 'CEREALS')
 
 ];

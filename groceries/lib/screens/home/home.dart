@@ -96,11 +96,7 @@ class _HomeState extends State<Home> {
               categoryController.category.value == 'MEAT'?
               const Meats():
               categoryController.category.value == 'SEAFOOD'?
-              const SeaFood():
-              categoryController.category.value == 'DIARY'?
-              const Meats():
-              categoryController.category.value == 'CEREALS'? 
-              const Meats():              
+              const SeaFood():            
               const SizedBox())
               )  
             ],
