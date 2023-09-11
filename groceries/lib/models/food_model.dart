@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class FoodsData {
   final String title;
   final String image;
@@ -5,11 +7,13 @@ class FoodsData {
   final int? quantity;
   final String price;
   final String? measuringUnit;
+  final Color color;
   final List<bool> favAndCart;
 
-  FoodsData(
+  FoodsData( 
       {required this.title,
       required this.price,
+      required this.color,
       this.quantity,
       this.measuringUnit,
       required this.favAndCart,
@@ -19,6 +23,7 @@ class FoodsData {
 
 List<FoodsData> fruits = [
   FoodsData(
+      color: Colors.red,
       title: 'Apples',
       image: 'assets/images/trans_apple.png',
       categories: 'FRUITS',
@@ -28,6 +33,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Avocado',
+      color: const Color(0xFF568203),
       image: 'assets/images/trans_avocado.png',
       categories: 'FRUITS',
       price: ' GHS 1',
@@ -36,6 +42,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Banana',
+      color: const Color(0xFFFFFF00),
       image: 'assets/images/trans_banana.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -44,6 +51,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Berries',
+      color: const Color(0xFFFF0000),
       image: 'assets/images/trans_berry.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -52,6 +60,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Grapes',
+      color: const Color(0xFF6B2E38),
       image: 'assets/images/trans_grapes.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -60,6 +69,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Mango',
+      color: const Color(0xFFFFA500),
       image: 'assets/images/trans_mango.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -68,6 +78,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Orange',
+      color: const Color(0xFFFFA500),
       image: 'assets/images/trans_orange.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -76,6 +87,7 @@ List<FoodsData> fruits = [
       quantity: 0),
   FoodsData(
       title: 'Watermelon',
+      color: const Color(0xFF228B22),
       image: 'assets/images/trans_watermelon.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
@@ -87,6 +99,7 @@ List<FoodsData> fruits = [
 List<FoodsData> veggies = [
   FoodsData(
       title: 'Beetroot',
+      color: const Color(0xFF8E354A),
       image: 'assets/images/trans_beetroot.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -95,6 +108,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Bell Pepper',
+      color: const Color(0xFFFFA500),
       image: 'assets/images/trans_bell_pepper.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -103,6 +117,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Broccoli',
+      color: const Color(0xFF228B22),
       image: 'assets/images/trans_broccoli.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -111,6 +126,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Cabbage',
+      color: const Color(0xFF228B22),
       image: 'assets/images/trans_cabbage.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -119,6 +135,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Carrots',
+      color: const Color(0xFFFFA500),
       image: 'assets/images/trans_carrots.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -127,6 +144,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Cauliflower',
+      color: const Color(0xFFFFFFFF),
       image: 'assets/images/trans_cauliflower.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -135,6 +153,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Cucumber',
+      color: const Color(0xFF008000),
       image: 'assets/images/trans_cucumber.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -143,6 +162,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Pineapple',
+      color: const Color(0xFFFFD700),
       image: 'assets/images/trans_pineapple.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -151,6 +171,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'GreenPeas',
+      color: const Color(0xFF00FF00),
       image: 'assets/images/trans_greenpeas.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -159,6 +180,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Lemon',
+      color: const Color(0xFFFFFF00),
       image: 'assets/images/trans_lemon.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -167,6 +189,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Lettuce',
+      color: const Color(0xFF00FF00),
       image: 'assets/images/trans_lettuce.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -175,6 +198,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Okro',
+      color: const Color(0xFF008000),
       image: 'assets/images/trans_okro.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -183,6 +207,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Onion',
+      color: const Color(0xFFD2B48C),
       image: 'assets/images/trans_onion.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -191,6 +216,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Pepper',
+      color: const Color(0xFFFF0000),
       image: 'assets/images/trans_pepper.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -199,6 +225,7 @@ List<FoodsData> veggies = [
       quantity: 0),
   FoodsData(
       title: 'Tomatoes',
+      color: const Color(0xFFFF6347),
       image: 'assets/images/trans_tomatoe.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
@@ -210,6 +237,7 @@ List<FoodsData> veggies = [
 List<FoodsData> fish = [
   FoodsData(
       title: 'Catfish',
+      color: const Color(0xFF6B6B6B),
       image: 'assets/images/catfish.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -218,6 +246,7 @@ List<FoodsData> fish = [
       categories: 'FISH'),
   FoodsData(
       title: 'Salmon',
+      color: const Color(0xFFFF6B6B),
       image: 'assets/images/trans_salmon.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -226,6 +255,7 @@ List<FoodsData> fish = [
       categories: 'FISH'),
   FoodsData(
       title: 'Tilapia',
+      color: const Color(0xFFC0C0C0),
       image: 'assets/images/trans_tilapia.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -237,6 +267,7 @@ List<FoodsData> fish = [
 List<FoodsData> seaFood = [
   FoodsData(
       title: 'Crab',
+      color: const Color(0xFF8B4513),
       image: 'assets/images/trans_crab.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -245,6 +276,7 @@ List<FoodsData> seaFood = [
       categories: 'SEAFOOD'),
   FoodsData(
       title: 'Prawns',
+      color: const Color(0xFFFFA07A),
       image: 'assets/images/trans_prawns.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -253,6 +285,7 @@ List<FoodsData> seaFood = [
       categories: 'SEAFOOD'),
   FoodsData(
       title: 'Lobster',
+      color: const Color(0xFFE34234),
       image: 'assets/images/trans_lobster.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -264,6 +297,7 @@ List<FoodsData> seaFood = [
 List<FoodsData> meats = [
   FoodsData(
       title: 'Beef',
+      color: const Color(0xFF8B4513),
       image: 'assets/images/beef.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -272,6 +306,7 @@ List<FoodsData> meats = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Lamb',
+      color: const Color(0xFF8B4513),
       image: 'assets/images/trans_lamb.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -280,6 +315,7 @@ List<FoodsData> meats = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Goat Meat',
+      color: const Color(0xFF8B4513),
       image: 'assets/images/trans_goat_meat.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -288,6 +324,7 @@ List<FoodsData> meats = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Pork',
+       color: const Color(0xFFA0522D),
       image: 'assets/images/trans_pork.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -296,6 +333,7 @@ List<FoodsData> meats = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Chicken',
+       color: const Color(0xFFFFE4B5),
       image: 'assets/images/trans_chicken.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -304,6 +342,7 @@ List<FoodsData> meats = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Eggs',
+       color: const Color(0xFFFFD700),
       image: 'assets/images/eggs.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -312,6 +351,7 @@ List<FoodsData> meats = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Turkey',
+       color: const Color(0xFF8B4513),
       image: 'assets/images/trans_turkey.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -323,6 +363,7 @@ List<FoodsData> meats = [
 List<FoodsData> all = [
   FoodsData(
       title: 'Pork',
+      color: const Color(0xFFA0522D),
       image: 'assets/images/trans_pork.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -331,6 +372,7 @@ List<FoodsData> all = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Chicken',
+       color: const Color(0xFFFFE4B5),
       image: 'assets/images/trans_chicken.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
@@ -339,78 +381,83 @@ List<FoodsData> all = [
       categories: 'Proteins'),
   FoodsData(
       title: 'Apples',
+       color: Colors.red,
       image: 'assets/images/trans_apple.png',
       categories: 'FRUITS',
       price: ' GHS 1',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0),
-      FoodsData(
+  FoodsData(
       title: 'Beef',
+       color: const Color(0xFF8B4513),
       image: 'assets/images/beef.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       quantity: 0,
       favAndCart: [false, false],
       categories: 'Proteins'),
-      FoodsData(
+  FoodsData(
       title: 'Banana',
+       color: const Color(0xFFFFFF00),
       image: 'assets/images/trans_banana.png',
       categories: 'FRUITS',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0),
-
-      FoodsData(
+  FoodsData(
       title: 'Tomatoes',
+      color: const Color(0xFFFF6347),
       image: 'assets/images/trans_tomatoe.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0),
-
-      FoodsData(
+  FoodsData(
       title: 'Pepper',
+      color: const Color(0xFFFF0000),
       image: 'assets/images/trans_pepper.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0),
-
-      FoodsData(
+  FoodsData(
       title: 'Onion',
+       color: const Color(0xFFD2B48C),
       image: 'assets/images/trans_onion.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0),
-      FoodsData(
+  FoodsData(
       title: 'Okro',
+       color: const Color(0xFF008000),
       image: 'assets/images/trans_okro.png',
       categories: 'VEGGIES',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0),
-      FoodsData(
+  FoodsData(
       title: 'Tilapia',
+       color: const Color(0xFFC0C0C0),
       image: 'assets/images/trans_tilapia.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0,
       categories: 'Proteins'),
-      FoodsData(
+  FoodsData(
       title: 'Salmon',
+      color: const Color(0xFFFF6B6B),
       image: 'assets/images/trans_salmon.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
       quantity: 0,
       categories: 'FISH'),
-
 ];

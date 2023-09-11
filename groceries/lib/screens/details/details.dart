@@ -23,8 +23,9 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
      Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: widget.foodsData.color,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: widget.foodsData.color,
         leading: IconButton(
             onPressed: () => Get.back(),
             icon: const Icon(

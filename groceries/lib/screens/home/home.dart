@@ -93,8 +93,6 @@ class _HomeState extends State<Home> {
               const Veggies():
               categoryController.category.value == 'FISH'?
               const Fish():
-              categoryController.category.value == 'BAKES'?
-              const Meats():
               categoryController.category.value == 'MEAT'?
               const Meats():
               categoryController.category.value == 'SEAFOOD'?
