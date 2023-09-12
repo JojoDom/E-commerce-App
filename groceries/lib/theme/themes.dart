@@ -4,13 +4,8 @@ class Themes {
   static final lightTheme = ThemeData(
     colorScheme: const ColorScheme.light(
       brightness: Brightness.light,
-      primary: Color(0xFF81c784),
+      primary: Colors.yellow,
     ),
-    // primaryColor: const Color(0xFF81c784),
-  );
-  // .copyWith(
-  //  primaryColor: const Color(0xFF81c784),
-  // );
-
+  ).copyWith(primaryColor: Colors.yellow,);
   static final darkTheme = ThemeData(colorScheme: const ColorScheme.dark());
 }
