@@ -74,7 +74,7 @@ class _DetailsState extends State<Details> {
                     const Divider(
                       color: Colors.grey,
                     ),
-                    const AddToCart()
+                    AddToCart(foodsData: widget.foodsData,)
                   ],
                 ),
               ),
