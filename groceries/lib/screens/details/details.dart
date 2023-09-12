@@ -49,7 +49,7 @@ class _DetailsState extends State<Details> {
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(top: size.height * 0.3),
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   top: 20,
                   left: 20,
                   right: 20,
