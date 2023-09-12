@@ -43,8 +43,8 @@ class _DetailsState extends State<Details> {
                   margin: EdgeInsets.only(top: size.height * 0.3),
                   padding: EdgeInsets.only(
                     top: size.height * 0.12,
-                    left: 10,
-                    right: 10,
+                    left: 20,
+                    right: 20,
                   ),
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -55,9 +55,9 @@ class _DetailsState extends State<Details> {
                   ),
                   child: Column(
                     children: <Widget>[
-                     Description(foodsData: widget.foodsData,),
+                    QuantityAndPrice(foodsData: widget.foodsData,),
                      const SizedBox(height:10),
-                     QuantityAndPrice(foodsData: widget.foodsData,),
+                     Description(foodsData: widget.foodsData,),                  
                      const SizedBox(height:10),
                     //   AddToCart(product: product)
                     ],
