@@ -6,7 +6,8 @@
 
 # DEMO
 
-![screen-20230912-170039](https://github.com/JojoDom/E-commerce-App/assets/93986114/f024fcb5-265c-4303-b0d5-804eb38a61eb)
+
+![screen-20230912-170039 (1)](https://github.com/JojoDom/E-commerce-App/assets/93986114/efce018a-b5b8-4163-94ad-1c4d52fa50a3)
 
 
 
