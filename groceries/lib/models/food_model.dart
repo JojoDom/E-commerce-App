@@ -4,7 +4,7 @@ class FoodsData {
   final String title;
   final String image;
   final String categories;
-  final int? quantity;
+   int? quantity;
   final String price;
   final String? measuringUnit;
   final Color color;
@@ -37,7 +37,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
 
   FoodsData(
       title: 'Avocado',
@@ -48,7 +48,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1',
       favAndCart: [false, false],
       measuringUnit: 'kg',
-      quantity: 0),
+      quantity: 1),
        FoodsData(
       title: 'Pineapple',
       description: 'Experience a burst of sunshine with our ripe and succulent pineapples. Each bite is a tropical delight, sweet and tangy, ready to transport your taste buds to an island getaway. Whether you enjoy them fresh, in fruit salads, or as a refreshing beverage garnish, our pineapples bring a taste of paradise to every dish. Don\'t wait for a vacation to savor the tropics – bring home the sunshine with our delicious pineapples.',
@@ -58,7 +58,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Banana',
       color: Colors.yellow,
@@ -68,7 +68,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Berries',
       color: const Color(0xFFFF0000),
@@ -78,7 +78,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Grapes',
       description: 'Experience the joy of biting into nature\'s candy with our selection of plump, sweet grapes. From succulent red grapes to refreshing green grapes, our variety is a taste sensation. Perfect for snacking, adding to salads, or as a healthy dessert, our grapes are a flavorful delight. Treat yourself and your loved ones to the goodness of our grapes they\'re like sunshine in every bite. Order now and enjoy the deliciousness.',
@@ -88,7 +88,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Mango',
       description: 'Savor the tropical goodness of our ripe and juicy mangoes. Each bite is a burst of sweet, luscious flavor that transports you to paradise. Our mangoes are handpicked at the peak of ripeness to ensure maximum indulgence. Whether you enjoy them sliced, diced, or blended into smoothies, our mangoes are a taste of sunshine in every mouthful. Don\'t miss out on this tropical treat – order your mangoes today and experience the essence of summer.',
@@ -98,7 +98,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       favAndCart: [false, false],
       measuringUnit: 'kg',
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Orange',
       description: 'Revitalize your day with the bright and tangy flavor of our premium oranges. These citrus gems are bursting with natural juiciness and vitamin C goodness. Whether you peel them for a healthy snack, squeeze them for fresh orange juice, or use them in your culinary creations, our oranges are your ticket to vibrant flavor. Elevate your wellness routine and satisfy your cravings with our delicious, vitamin-packed oranges. Grab a taste of sunshine today.',
@@ -108,7 +108,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       favAndCart: [false, false],
       measuringUnit: 'kg',
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Watermelon',
       description: 'Stay cool and refreshed with our succulent watermelons. Bursting with juicy, mouthwatering sweetness, our watermelons are the ultimate summer treat. Each slice is a delightful explosion of flavor, perfect for picnics, BBQs, or a quick hydrating snack. Beat the heat with our delicious watermelons – they\'re nature\'s way of saying \'chill out.\' Dive into a slice of paradise today.',
@@ -118,7 +118,7 @@ List<FoodsData> fruits = [
       price: ' GHS 1.50',
       favAndCart: [false, false],
       measuringUnit: 'kg',
-      quantity: 0),
+      quantity: 1),
 ];
 
 List<FoodsData> veggies = [
@@ -131,7 +131,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Bell Pepper',
       description: 'Brighten up your meals with our assortment of bell peppers in every hue of the rainbow. From the sweetness of red to the freshness of green, our peppers add a burst of flavor and vibrant color to your dishes. Whether you stuff them, sauté them, or enjoy them raw, our bell peppers are a kitchen essential. Elevate your cooking with the diversity of colors and flavors – transform ordinary into extraordinary with our bell peppers.',
@@ -141,7 +141,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Broccoli',
       description: 'ntroduce health and flavor to your plate with our fresh broccoli florets. These vibrant green gems are not only delicious but also packed with essential nutrients. Whether steamed, stir-fried, or added to your favorite dishes, our broccoli enhances your meals with a satisfying crunch and a burst of freshness. Elevate your cooking and well-being with the versatile and nutritious goodness of broccoli. Fuel your body with the green goodness – order yours today!.',
@@ -151,7 +151,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Cabbage',
       description: 'Elevate your meals with our farm-fresh cabbage heads. From coleslaw to stir-fries and hearty soups, cabbage is a versatile addition to your culinary adventures. With its satisfying crunch and mild flavor, our cabbage is the perfect canvas for your favorite recipes. Whether you prefer it raw or cooked, our cabbage heads are ready to bring wholesome goodness to your plate. Experience the crispness – order yours today!.',
@@ -161,7 +161,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Carrots',
       description: 'Fuel your body with the vibrant orange goodness of our fresh carrots. Packed with vitamins and natural sweetness, our carrots are the ideal snack or ingredient for your favorite recipes. Whether you enjoy them raw with a dip or use them in soups, salads, and stir-fries, our carrots add a burst of color and nutrition to every dish. Treat yourself to the natural crunch and sweetness – make carrots a part of your daily routine.',
@@ -171,7 +171,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Cauliflower',
       description: 'Elevate your meals with our tender cauliflower florets, a blank canvas for culinary creativity. Roast them for a satisfying crunch, mash them for a creamy side, or use them in a variety of dishes. Our cauliflower is ready to add subtle nutty flavors to your recipes while providing essential nutrients. Whether you\'re experimenting in the kitchen or looking for a healthy side, our cauliflower florets are your versatile companion. Discover endless possibilities – order yours today.',
@@ -181,7 +181,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Cucumber',
       color: const Color(0xFF008000),
@@ -191,7 +191,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
  
   FoodsData(
       title: 'GreenPeas',
@@ -202,7 +202,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Lemon',
       description: 'Awaken your taste buds with the tangy and citrusy goodness of our lemons. These bright yellow fruits are a kitchen essential, perfect for adding zing to your dishes and beverages. Whether you\'re making homemade lemonade, dressing a salad, or infusing flavor into your recipes, our lemons provide that extra pop of freshness. Elevate your culinary creations with the vibrant flavor of lemons – they\'re nature\'s secret ingredient for a burst of brightness in every bite.',
@@ -212,7 +212,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Lettuce',
       description: 'Elevate your salads, wraps, and sandwiches with our premium lettuce leaves. Each leaf is a crisp and refreshing bite that adds a burst of green goodness to your meals. Whether you\'re looking for the perfect base for your favorite dressings or a nutritious wrap filling, our lettuce leaves are versatile and packed with nutrients. Fuel your body with the crispness and freshness of lettuce – it\'s the foundation of wholesome and delicious creations!.',
@@ -222,7 +222,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Okro',
       description: 'Discover the versatility and health benefits of our fresh okra. These tender pods are perfect for adding a satisfying crunch to your soups, stews, and stir-fries. Whether you enjoy them sliced, whole, or fried, our okra is a delightful addition to your favorite recipes. With its unique texture and wholesome goodness, okra brings a touch of Southern comfort to every dish. Elevate your cooking and savor the flavor of okra – it\'s a culinary delight waiting to be explored',
@@ -232,7 +232,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Onion',
       color: const Color(0xFFD2B48C),
@@ -242,7 +242,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Pepper',
       description: 'Explore a world of flavor with our assortment of vibrant peppers. From the mild sweetness of bell peppers to the fiery kick of chili peppers, our selection adds a pop of color and spice to your recipes. Whether you\'re sautéing, stuffing, or garnishing, our peppers are the secret ingredient to transforming ordinary dishes into extraordinary feasts. Elevate your culinary adventures with the rich and diverse flavors of peppers – they\'re the palette of your kitchen canvas.',
@@ -252,7 +252,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Tomatoes',
       description: 'Experience the authentic taste of homegrown tomatoes, bursting with flavor and nutrition. Whether you\'re making a classic pasta sauce, a vibrant salad, or simply slicing for a refreshing snack, our tomatoes are the heart and soul of your meals. Packed with vitamins and natural sweetness, these juicy treasures are the key to adding a burst of freshness to your recipes. Elevate your culinary creations with the goodness of our ripe and succulent tomatoes – they\'re the essence of garden-fresh flavor.',
@@ -262,7 +262,7 @@ List<FoodsData> veggies = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
 ];
 
 List<FoodsData> fish = [
@@ -274,7 +274,7 @@ List<FoodsData> fish = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'FISH'),
   FoodsData(
       title: 'Salmon',
@@ -284,7 +284,7 @@ List<FoodsData> fish = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'FISH'),
   FoodsData(
       title: 'Tilapia',
@@ -294,7 +294,7 @@ List<FoodsData> fish = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
 ];
 
@@ -307,7 +307,7 @@ List<FoodsData> seaFood = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'SEAFOOD'),
   FoodsData(
       title: 'Prawns',
@@ -317,7 +317,7 @@ List<FoodsData> seaFood = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'SEAFOOD'),
   FoodsData(
       title: 'Lobster',
@@ -327,7 +327,7 @@ List<FoodsData> seaFood = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'SEAFOOD'),
 ];
 
@@ -339,7 +339,7 @@ List<FoodsData> meats = [
       image: 'assets/images/beef.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      quantity: 0,
+      quantity: 1,
       favAndCart: [false, false],
       categories: 'Proteins'),
   FoodsData(
@@ -350,7 +350,7 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Goat Meat',
@@ -360,7 +360,7 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Pork',
@@ -370,7 +370,7 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Chicken',
@@ -380,7 +380,7 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Eggs',
@@ -390,7 +390,7 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Turkey',
@@ -400,7 +400,7 @@ List<FoodsData> meats = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
 ];
 
@@ -413,7 +413,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Chicken',
@@ -423,7 +423,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Apples',
@@ -438,7 +438,7 @@ List<FoodsData> all = [
       price: ' GHS 1',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Beef',
        description: 'Experience the rich and savory flavor of our high-quality beef cuts. From tender steaks to juicy burgers, our beef is the foundation of countless culinary delights. Whether you\'re grilling, roasting, or slow-cooking, our beef promises an indulgent dining experience that\'s perfect for family gatherings or special occasions. Known for its succulence and versatility, our beef is a favorite among meat lovers. Elevate your meals and delight your taste buds with the exceptional quality and taste of our premium beef – it\'s the secret ingredient to memorable dishes!',
@@ -446,7 +446,7 @@ List<FoodsData> all = [
       image: 'assets/images/beef.png',
       price: ' GHS 1.50',
       measuringUnit: 'kg',
-      quantity: 0,
+      quantity: 1,
       favAndCart: [false, false],
       categories: 'Proteins'),
   FoodsData(
@@ -458,7 +458,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Tomatoes',
       color: const Color(0xFFFF6347),
@@ -468,7 +468,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Pepper',
        description: 'Explore a world of flavor with our assortment of vibrant peppers. From the mild sweetness of bell peppers to the fiery kick of chili peppers, our selection adds a pop of color and spice to your recipes. Whether you\'re sautéing, stuffing, or garnishing, our peppers are the secret ingredient to transforming ordinary dishes into extraordinary feasts. Elevate your culinary adventures with the rich and diverse flavors of peppers – they\'re the palette of your kitchen canvas.',
@@ -478,7 +478,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Onion',
       color: const Color(0xFFD2B48C),
@@ -488,7 +488,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Okro',
       color: const Color(0xFF008000),
@@ -498,7 +498,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0),
+      quantity: 1),
   FoodsData(
       title: 'Tilapia',
       description: 'Experience the mild and versatile flavor of our tilapia fillets. These tender and flaky fillets are perfect for creating a variety of delectable dishes. Whether you prefer them grilled, fried, or baked, our tilapia lends itself to culinary creativity. Known for its delicate taste and lean protein, our tilapia is a favorite for both seasoned cooks and seafood newcomers. Elevate your dining experience and discover the joy of cooking with our premium tilapia – it\'s a palate-pleasing choice for any meal!',
@@ -507,7 +507,7 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'Proteins'),
   FoodsData(
       title: 'Salmon',
@@ -517,6 +517,6 @@ List<FoodsData> all = [
       price: ' GHS 1.50',
       measuringUnit: 'kg',
       favAndCart: [false, false],
-      quantity: 0,
+      quantity: 1,
       categories: 'FISH'),
 ];

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:groceries/global_variables/global_variables.dart';
 import 'package:groceries/models/food_model.dart';
 
 class CartCounter extends StatefulWidget {
-  const CartCounter({Key? key, required this.foodsData,}) : super(key: key);
+  const CartCounter({
+    Key? key,
+    required this.foodsData,
+  }) : super(key: key);
   final FoodsData foodsData;
 
   @override
@@ -10,18 +15,18 @@ class CartCounter extends StatefulWidget {
 }
 
 class _CartCounterState extends State<CartCounter> {
-  int numOfItems = 1;
-
   void _incrementCounter() {
     setState(() {
-      numOfItems++;
+      cartController.numofItems.value++;
+      widget.foodsData.quantity = cartController.numofItems.value;
     });
   }
 
   // ignore: unused_element
   void _decrementCounter() {
     setState(() {
-      numOfItems--;
+      cartController.numofItems.value--;
+       widget.foodsData.quantity = cartController.numofItems.value;
     });
   }
 
@@ -33,23 +38,25 @@ class _CartCounterState extends State<CartCounter> {
           backgroundColor: widget.foodsData.color,
           heroTag: null,
           onPressed: () {
-            if (numOfItems > 1) {
+            if (cartController.numofItems.value > 1) {
               _decrementCounter();
             }
           },
           tooltip: 'remove',
           child: const Icon(Icons.remove),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(
-            // if our item is less  then 10 then  it shows 01 02 like that
-            numOfItems.toString().padLeft(2, "0"),
-            style: Theme.of(context).textTheme.titleLarge,
+        Obx(
+          () => Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              // if our item is less  then 10 then  it shows 01 02 like that
+              cartController.numofItems.value.toString().padLeft(2, "0"),
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
           ),
         ),
         FloatingActionButton(
-           backgroundColor: widget.foodsData.color,
+          backgroundColor: widget.foodsData.color,
           heroTag: null,
           onPressed: _incrementCounter,
           tooltip: 'add',

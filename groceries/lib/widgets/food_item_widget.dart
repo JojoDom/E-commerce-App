@@ -21,7 +21,10 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(Details(foodsData: widget.foodData)),
+      onTap: () {
+        cartController.numofItems.value = 1;
+        Get.to(Details(foodsData: widget.foodData));
+      },
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         child: Padding(
@@ -30,9 +33,10 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
             alignment: Alignment.center,
             children: [
               Column(children: [
-                Flexible(child: Hero(
-                  tag: widget.foodData.title,
-                  child: Image.asset(widget.foodData.image))),
+                Flexible(
+                    child: Hero(
+                        tag: widget.foodData.title,
+                        child: Image.asset(widget.foodData.image))),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -69,8 +73,8 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
                         setState(() {
                           widget.foodData.favAndCart[1] = false;
                         });
-                        cartController.cart.removeWhere(
-                            (element) => element.title == widget.foodData.title);
+                        cartController.cart.removeWhere((element) =>
+                            element.title == widget.foodData.title);
                         cartController.update();
                       }
                     },
@@ -115,8 +119,8 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
                         setState(() {
                           widget.foodData.favAndCart[0] = false;
                         });
-                        favoritesController.favorites.removeWhere(
-                            (element) => element.title == widget.foodData.title);
+                        favoritesController.favorites.removeWhere((element) =>
+                            element.title == widget.foodData.title);
                         favoritesController.update();
                       } else {
                         setState(() {
