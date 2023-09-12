@@ -35,7 +35,7 @@ class _CartState extends State<Cart> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('Quantity : ${cartController.cart[index].quantity}'),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_circle, color: Colors.red,))
+                  IconButton(onPressed: (){}, icon: const Icon(Icons.remove_circle, color: Colors.red,))
                 ],
               ),
               trailing: Text('Subtotal : GHS ${(cartController.numofItems.value*1.5)}'),
