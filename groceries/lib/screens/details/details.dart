@@ -42,13 +42,14 @@ class _DetailsState extends State<Details> {
               )),
           elevation: 0,
         ),
-        body: SingleChildScrollView(
-            child: SizedBox(
-          height: size.height,
-          child: Stack(
+        body: ListView(
+          children: [
+            SizedBox(
+              height: size.height,
+              child: Stack(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(top: size.height * 0.3),
+                margin: EdgeInsets.only(top: size.height * 0.2),
                 padding: const EdgeInsets.only(
                   top: 20,
                   left: 20,
@@ -74,13 +75,15 @@ class _DetailsState extends State<Details> {
                     const Divider(
                       color: Colors.grey,
                     ),
-                    AddToCart(foodsData: widget.foodsData,)
+                    Flexible(child: AddToCart(foodsData: widget.foodsData,))
                   ],
                 ),
               ),
               ProductTitleWithImage(foodsData: widget.foodsData)
             ],
-          ),
-        )));
+              ),
+            ),
+          ],
+        ));
   }
 }

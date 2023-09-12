@@ -17,7 +17,7 @@ class _AddToCartState extends State<AddToCart> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
           Row(
@@ -61,7 +61,7 @@ class _AddToCartState extends State<AddToCart> {
               )
             ],
           ),
-          const SizedBox(height: 20),
+         const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               if (widget.foodsData.favAndCart[1]) {
@@ -94,7 +94,8 @@ class _AddToCartState extends State<AddToCart> {
                     fontWeight: FontWeight.w500),
               )),
             ),
-          )
+          ),
+        
         ],
       ),
     );
