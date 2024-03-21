@@ -92,13 +92,13 @@ class _DashboardState extends State<Dashboard> {
       ),
       floatingActionButtonLocation:
           FloatingActionButtonLocation.miniStartDocked,
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: const BottomAppBar(
         elevation: 4,
-        shape: const CircularNotchedRectangle(),
+        shape:  CircularNotchedRectangle(),
         notchMargin: 5,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
+          children:  [
             SizedBox(width: 15),
             BottomNavItem(icon: Icons.favorite, index: 1),
             BottomNavItem(index: 2, icon: Icons.shopping_cart),
