@@ -18,7 +18,7 @@ showNotification({String? title, String? body, String? route, String? image}) {
           ),
           Text(body ?? ''),
           const SizedBox(height: 15),
-          Flexible(child: CachedNetworkImage(imageUrl: image??'')),
+          Flexible(child: CachedNetworkImage(imageUrl: image??'https://www.instacart.com/company/wp-content/uploads/2023/08/grocery-delivery-to-hotel-hero.webp')),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: IconButton(

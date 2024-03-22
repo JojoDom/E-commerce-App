@@ -9,6 +9,62 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.26"
+  agconnect_applinking:
+    dependency: "direct main"
+    description:
+      name: agconnect_applinking
+      sha256: f326be503ffd950b75a8c6522521c8d979f3af4690b3990d4656f1d3e84752a1
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+300"
+  agconnect_appmessaging:
+    dependency: "direct main"
+    description:
+      name: agconnect_appmessaging
+      sha256: "4175d2e5f99a55fc2424fba866fa1256b7c1f56b9159d8eb7557a20e73c2ece4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+300"
+  agconnect_auth:
+    dependency: "direct main"
+    description:
+      name: agconnect_auth
+      sha256: "6d7db22b4f626d0801c63d3d9098d2c7df12a44c1e2b98f63c057ad5ca3bf799"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+310"
+  agconnect_cloudfunctions:
+    dependency: "direct main"
+    description:
+      name: agconnect_cloudfunctions
+      sha256: "827e3ad6ea036a717773ca387517ca7886c153fd50e61c9ec0720ca8b38b43d2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+300"
+  agconnect_cloudstorage:
+    dependency: "direct main"
+    description:
+      name: agconnect_cloudstorage
+      sha256: "2985e84073322df4ddc0c097bb19d2fa97c0968a8bb58cdc01939f9e3e0f591e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+300"
+  agconnect_crash:
+    dependency: "direct main"
+    description:
+      name: agconnect_crash
+      sha256: "38338bce6bd3d7a6a2fc2ade15b71642f51cfffb5fc0a4a04783daf50cf07e79"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+300"
+  agconnect_remote_config:
+    dependency: "direct main"
+    description:
+      name: agconnect_remote_config
+      sha256: "1fdc4343b03ddcd5b6beaeae274234f14cdc1bf21aaddd0a7473474fc9902b2c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.0+300"
   archive:
     dependency: transitive
     description:
@@ -378,6 +434,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  huawei_push:
+    dependency: "direct main"
+    description:
+      name: huawei_push
+      sha256: bccd7df3fe79925c77b78404956c74c921996d63e788cd66fef8def85b6c3ca4
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.12.0+300"
   image:
     dependency: transitive
     description:
