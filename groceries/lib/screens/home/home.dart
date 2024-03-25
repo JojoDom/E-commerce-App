@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:groceries/controllers/home_controller.dart';
 import 'package:groceries/models/categories_data.dart';
@@ -11,6 +12,8 @@ import 'package:groceries/screens/home/local_widgets/all_categories_widget.dart'
 import 'package:groceries/theme/themes_controller.dart';
 import '../../controllers/category_controller.dart';
 import 'local_widgets/categories_widget.dart';
+import 'package:huawei_push/huawei_push.dart' as hms;
+import 'package:logger/logger.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -21,8 +24,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final themeController = Get.find<ThemeController>();
-  
-
   late HomeController homeController;
   bool _isVisible = true;
 
@@ -31,6 +32,8 @@ class _HomeState extends State<Home> {
       _isVisible = !_isVisible;
     });
   }
+
+
 
   @override
   void initState() {

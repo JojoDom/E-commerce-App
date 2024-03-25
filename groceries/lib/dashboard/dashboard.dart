@@ -8,6 +8,8 @@ import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/home/home.dart';
 import 'package:groceries/screens/search/search.dart';
+import 'package:huawei_push/huawei_push.dart' as hms;
+import 'package:logger/logger.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -58,8 +60,20 @@ class _DashboardState extends State<Dashboard> {
     });
   }
 
+  void initPlatformstate(){
+     Logger().i('HMS');
+    hms.Push.getTokenStream.listen((event) {    
+      Logger().i('HMS');
+       Logger().i('HMS $event');
+     }).onData((data) {Logger().i(" Data $data");});
+   
+  }
+
+
+
   @override
   void initState() {
+    initPlatformstate();
     setupInteractedMessage();
     super.initState();
   }
