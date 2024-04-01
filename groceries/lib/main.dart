@@ -10,6 +10,7 @@ import 'package:groceries/firebase_options.dart';
 import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/categories/fruits.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
+import 'package:groceries/screens/login.dart';
 import 'package:groceries/theme/themes.dart';
 import 'package:groceries/theme/themes_controller.dart';
 import 'package:groceries/utilities/routes.dart';
@@ -87,7 +88,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: Routes.FAVORITES, page: () => const Favorites()),
         GetPage(name: Routes.CART, page: () => const Cart())
       ],
-      home: const Dashboard(),
+      home: const LoginPage(),
     );
   }
 }

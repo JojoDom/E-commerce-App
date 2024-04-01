@@ -59,6 +59,7 @@ dependencies:
   agconnect_cloudfunctions: ^1.9.0+300
   agconnect_cloudstorage: ^1.9.0+300
   huawei_push: ^6.12.0+300
+  cloud_firestore: ^4.15.10
   # flutter_local_notifications: ^17.0.0
 
 dev_dependencies:
