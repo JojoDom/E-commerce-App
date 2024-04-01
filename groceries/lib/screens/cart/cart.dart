@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:groceries/global_variables/global_variables.dart';
+import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import 'package:groceries/screens/details/details.dart';
 import 'package:groceries/widgets/food_item_widget.dart';
 import 'package:get/get.dart';
 
-class Cart extends StatefulWidget {
+class Cart extends ConsumerStatefulWidget {
   const Cart({Key? key}) : super(key: key);
 
   @override
-  State<Cart> createState() => _CartState();
+  ConsumerState<Cart> createState() => _CartState();
 }
 
-class _CartState extends State<Cart> {
+class _CartState extends ConsumerState<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +23,8 @@ class _CartState extends State<Cart> {
         elevation: 0,
         backgroundColor: Colors.green,
       ),
-      body: Obx(
-        () => Container(
+      body: 
+         Container(
             margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             child: ListView.separated(
                 itemBuilder: ((context, index) => Card(
@@ -30,27 +32,26 @@ class _CartState extends State<Cart> {
                           borderRadius: BorderRadius.circular(15)),
                       child: ListTile(
                         onTap: () => Get.to(
-                            Details(foodsData: cartController.cart[index])),
-                        title: Text(cartController.cart[index].title),
+                            Details(foodsData: ref.read(addToCart)[index])),
+                        title: Text(ref.read(addToCart)[index].title),
                         subtitle: Text(
-                            'Quantity : ${cartController.cart[index].quantity}'),
+                            'Quantity : ${ref.read(addToCart)[index].quantity}'),
                         trailing: Column(
                           children: [
                             Text(
-                                'Subtotal : GHS ${(cartController.numofItems.value * 1.5)}'),
+                                'Subtotal : GHS ${(ref.read(numberOfItemsProv) * 1.5)}'),
                             Flexible(
                                 child: IconButton(
                                     onPressed: () {
                                       setState(() {
-                                        cartController
-                                            .cart[index].favAndCart[1] = false;
+                                        ref
+                                            .read(addToCart)[index]
+                                            .favAndCart[1] = false;
                                       });
-                                      cartController.cart.removeWhere(
+                                      ref.read(addToCart).removeWhere(
                                           (element) =>
                                               element.title ==
-                                               cartController
-                                            .cart[index].title);
-                                      cartController.update();
+                                              ref.read(addToCart)[index].title);
                                     },
                                     icon: const Icon(
                                       Icons.remove_circle,
@@ -60,17 +61,17 @@ class _CartState extends State<Cart> {
                         ),
                         leading: CircleAvatar(
                           radius: 30,
-                          backgroundColor: cartController.cart[index].color,
+                          backgroundColor: ref.read(addToCart)[index].color,
                           backgroundImage:
-                              AssetImage(cartController.cart[index].image),
+                              AssetImage(ref.read(addToCart)[index].image),
                         ),
                       ),
                     )),
                 separatorBuilder: ((context, index) => const SizedBox(
                       height: 10,
                     )),
-                itemCount: cartController.cart.length)),
-      ),
+                itemCount: ref.read(addToCart).length)),
+      
     );
   }
 }

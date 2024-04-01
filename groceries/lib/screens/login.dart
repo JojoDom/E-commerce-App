@@ -1,7 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:groceries/controllers/select_country_controller.dart';
+import 'package:groceries/providers/select_country_controller.dart';
 import 'package:groceries/dashboard/dashboard.dart';
 import 'package:groceries/widgets/country_list.dart';
 
@@ -22,7 +23,9 @@ class _LoginPageState extends State<LoginPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            decoration: BoxDecoration(border: Border.all(color: Colors.grey.shade300), borderRadius: BorderRadius.circular(20)),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade300),
+                borderRadius: BorderRadius.circular(20)),
             margin: const EdgeInsets.symmetric(horizontal: 10),
             height: 70,
             width: MediaQuery.of(context).size.width,
@@ -34,43 +37,51 @@ class _LoginPageState extends State<LoginPage> {
                   onTap: () {
                     Get.to(const CountryList());
                   },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
-                                          height: 30, width: 40,
-                                          child: Obx(() => 
-                                             CachedNetworkImage(
-                        imageUrl: selectContry.imageUrl.value,
-                        fit: BoxFit.contain,
-                                            ),
-                                          )),
-                      ),
-                      Obx(() =>  Text(selectContry.countryCode.value)),
-                      const Icon(Icons.arrow_drop_down)
-                    ],
-                  ),
+                  child: Consumer(builder: ((context, ref, child) {
+                    final selectCountryProv = ref.watch(countryListProvider);
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            height: 30,
+                            width: 40,
+                            child: CachedNetworkImage(
+                              imageUrl: selectCountryProv.imageUrl,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                        Text(selectCountryProv.countryCode),
+                        const Icon(Icons.arrow_drop_down)
+                      ],
+                    );
+                  })),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15),
-                  child: VerticalDivider(color: Colors.grey.shade300,),
+                  child: VerticalDivider(
+                    color: Colors.grey.shade300,
+                  ),
                 ),
-                Obx(() => 
-                   SizedBox(
-                      height: 60,
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: Center(
-                          child: TextField(
-                            maxLength: selectContry.maxlength.value,                           
-                        decoration: InputDecoration(
-                            hintText: 'XXX XXXX XXXX',
-                           // counterText: '',
-                            hintStyle: TextStyle(color: Colors.grey.shade600),
-                            border: InputBorder.none),
-                      ))),
-                )
+                Consumer(
+                  builder: ((context, ref, child) {
+                    final selectCountryProv = ref.watch(countryListProvider);
+                    return SizedBox(
+                        height: 60,
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: Center(
+                            child: TextField(
+                          maxLength: selectCountryProv.maxlength,
+                          decoration: InputDecoration(
+                              hintText: 'XXX XXXX XXXX',
+                              // counterText: '',
+                              hintStyle: TextStyle(color: Colors.grey.shade600),
+                              border: InputBorder.none),
+                        )));
+                  }),
+                ),
               ],
             ),
           ),

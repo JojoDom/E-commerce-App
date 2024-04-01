@@ -1,29 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:groceries/global_variables/global_variables.dart';
 import 'package:groceries/models/food_model.dart';
+import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import 'package:groceries/screens/details/add_to_cart.dart';
 import 'package:groceries/screens/details/product_title_with_image.dart';
 import 'package:groceries/screens/details/quantity_and_price.dart';
 
 import 'description.dart';
 
-class Details extends StatefulWidget {
+class Details extends ConsumerStatefulWidget {
   const Details({Key? key, required this.foodsData}) : super(key: key);
 
   final FoodsData foodsData;
 
   @override
-  State<Details> createState() => _DetailsState();
+  ConsumerState<Details> createState() => _DetailsState();
 }
 
-class _DetailsState extends State<Details> {
+class _DetailsState extends ConsumerState<Details> {
+  late int numberofItems;
   @override
   void initState() {
-    cartController.numofItems.value = widget.foodsData.quantity!;
+    ref.read(numberOfItemsProv.notifier).update((state) => widget.foodsData.quantity??1);
     super.initState();
   }
 

@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-
-import '../../global_variables/global_variables.dart';
+import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import '../../models/food_model.dart';
 
-class AddToCart extends StatefulWidget {
+class AddToCart extends ConsumerStatefulWidget {
   const AddToCart({Key? key, required this.foodsData}) : super(key: key);
 
   final FoodsData foodsData;
 
   @override
-  State<AddToCart> createState() => _AddToCartState();
+  ConsumerState<AddToCart> createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart> {
+class _AddToCartState extends ConsumerState<AddToCart> {
   @override
   Widget build(BuildContext context) {
+    final itemquantity = ref.watch(numberOfItemsProv);
+    final cartCount = ref.watch(addToCart).length;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
@@ -30,13 +32,13 @@ class _AddToCartState extends State<AddToCart> {
                     .bodyMedium!
                     .copyWith(color: Colors.black),
               ),
-              Obx(() => Text(
-                    '${cartController.numofItems.value}kg',
+               Text(
+                    '${itemquantity}kg',
                     style: Theme.of(context)
                         .textTheme
                         .bodyMedium!
                         .copyWith(fontSize: 18, fontWeight: FontWeight.w500),
-                  ))
+                  )
             ],
           ),
           const SizedBox(height: 15),
@@ -50,15 +52,14 @@ class _AddToCartState extends State<AddToCart> {
                     .bodyMedium!
                     .copyWith(color: Colors.black),
               ),
-              Obx(
-                () => Text(
-                  (cartController.numofItems.value * 1.5).toString() + 'GHS',
+               Text(
+                  '${ref.read(numberOfItemsProv) * 1.5}GHS',
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium!
                       .copyWith(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
-              )
+              
             ],
           ),
          const SizedBox(height: 20,),
@@ -68,15 +69,14 @@ class _AddToCartState extends State<AddToCart> {
                         setState(() {
                          widget.foodsData.favAndCart[1] = false;
                         });
-                        cartController.cart.removeWhere((element) =>
+                       ref.read(addToCart).removeWhere((element) =>
                             element.title == widget.foodsData.title);
-                        cartController.update();
                       } else{
                         setState(() {
                         widget.foodsData.favAndCart[1] = true;
                       });
-                      cartController.cart.add(widget.foodsData);
-                      cartController.update();
+                      ref.read(addToCart.notifier).addToCart([widget.foodsData]);
+                     
                       }
             },
             child: Container(

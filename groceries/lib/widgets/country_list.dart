@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:groceries/controllers/select_country_controller.dart';
+import 'package:groceries/providers/select_country_controller.dart';
 import 'package:logger/logger.dart';
 
 class CountryList extends StatefulWidget {
@@ -19,13 +20,13 @@ class _CountryListState extends State<CountryList> {
   @override
   void initState() {
     FirebaseFirestore.instance
-    .collection('countrylist')
-    .get()
-    .then((QuerySnapshot querySnapshot) {
-        querySnapshot.docs.forEach((doc) {
-          Logger().i(doc["name"]);
-           Logger().i(doc["imageUrl"]);
-        });
+        .collection('countrylist')
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      querySnapshot.docs.forEach((doc) {
+        Logger().i(doc["name"]);
+        Logger().i(doc["imageUrl"]);
+      });
     });
   }
 
@@ -43,27 +44,32 @@ class _CountryListState extends State<CountryList> {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const CircularProgressIndicator();
             }
-
             return ListView(
                 children: snapshot.data!.docs
                     .map((DocumentSnapshot documentSnapshot) {
               Map<String, dynamic> data =
                   documentSnapshot.data()! as Map<String, dynamic>;
-              return ListTile(
-                title: Text(data['name']),
-                leading: SizedBox(
-                  height: 30, width: 40,
-                  child: CachedNetworkImage(
-                    imageUrl: data['imageUrl'],
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                onTap: () {
-                  selectContry.countryCode.value = data['countryCode'];
-                  selectContry.maxlength.value = data['length'];
-                  selectContry.imageUrl.value = data['imageUrl'];
-                  Get.back();
-                },
+              return Consumer(
+                builder: ((context, ref, child) {
+                  return ListTile(
+                    title: Text(data['name']),
+                    leading: SizedBox(
+                      height: 30,
+                      width: 40,
+                      child: CachedNetworkImage(
+                        imageUrl: data['imageUrl'],
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                    onTap: () {
+                      ref.read(countryListProvider.notifier).update((state) {
+                        return CountryModel(data['countryCode'],
+                            data['imageUrl'], data['length']);
+                      });
+                      Get.back();
+                    },
+                  );
+                }),
               );
             }).toList());
           },

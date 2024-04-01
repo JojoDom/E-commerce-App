@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:groceries/global_variables/global_variables.dart';
+import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import 'package:groceries/screens/details/details.dart';
-
 import '../models/food_model.dart';
 
-class FoodItemWidget extends StatefulWidget {
+class FoodItemWidget extends ConsumerStatefulWidget {
   const FoodItemWidget({
     Key? key,
     required this.foodData,
@@ -14,15 +15,16 @@ class FoodItemWidget extends StatefulWidget {
   final FoodsData foodData;
 
   @override
-  State<FoodItemWidget> createState() => _FoodItemWidgetState();
+  ConsumerState<FoodItemWidget> createState() => _FoodItemWidgetState();
 }
 
-class _FoodItemWidgetState extends State<FoodItemWidget> {
+class _FoodItemWidgetState extends ConsumerState<FoodItemWidget> {
   @override
   Widget build(BuildContext context) {
+    final numberofItems = ref.watch(numberOfItemsProv);
     return GestureDetector(
       onTap: () {
-        cartController.numofItems.value = 1;
+        ref.read(numberOfItemsProv.notifier).update((state) => 1);
         Get.to(Details(foodsData: widget.foodData));
       },
       child: Card(
@@ -65,49 +67,52 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
               Positioned(
                 top: 0,
                 right: 0,
-                child: Visibility(
-                  visible: widget.foodData.favAndCart[1],
-                  child: InkWell(
-                    onTap: () {
-                      if (widget.foodData.favAndCart[1]) {
-                        setState(() {
-                          widget.foodData.favAndCart[1] = false;
-                        });
-                        cartController.cart.removeWhere((element) =>
-                            element.title == widget.foodData.title);
-                        cartController.update();
-                      }
-                    },
-                    child: Container(
-                      height: 30,
-                      width: 30,
-                      decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.red),
-                      child: const Icon(
-                        Icons.remove,
-                        color: Colors.white,
+                child: Consumer(
+                  builder: ((context, ref, child) {                                   
+                  return                 
+                  Visibility(
+                    visible: widget.foodData.favAndCart[1],
+                    replacement: InkWell(
+                      onTap:  (() {
+                         setState(() {
+                            widget.foodData.favAndCart[1] = true;
+                          });                    
+                    ref.read(addToCart.notifier).addToCart([widget.foodData]);                  
+                      }),
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.green),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  replacement: InkWell(
-                    onTap: () {
-                      setState(() {
-                        widget.foodData.favAndCart[1] = true;
-                      });
-                      cartController.cart.add(widget.foodData);
-                      cartController.update();
-                    },
-                    child: Container(
-                      height: 30,
-                      width: 30,
-                      decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.green),
-                      child: const Icon(
-                        Icons.add,
-                        color: Colors.white,
+                    child: InkWell(
+                      onTap: () {
+                        if (widget.foodData.favAndCart[1]) {
+                          setState(() {
+                            widget.foodData.favAndCart[1] = false;
+                          });
+                          ref.read(addToCart.notifier).removeFromCart([widget.foodData]);
+                          //  ref.read(addToCart).removeWhere((element) =>
+                          //     element.title == widget.foodData.title);
+                        }
+                      },
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.red),
+                        child: const Icon(
+                          Icons.remove,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
+                  );})
                 ),
               ),
               Positioned(
@@ -141,4 +146,6 @@ class _FoodItemWidgetState extends State<FoodItemWidget> {
       ),
     );
   }
+
+   
 }
