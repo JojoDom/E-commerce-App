@@ -65,22 +65,24 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.grey.shade300,
                   ),
                 ),
-                Consumer(
-                  builder: ((context, ref, child) {
-                    final selectCountryProv = ref.watch(countryListProvider);
-                    return SizedBox(
-                        height: 60,
-                        width: MediaQuery.of(context).size.width * 0.6,
-                        child: Center(
-                            child: TextField(
-                          maxLength: selectCountryProv.maxlength,
-                          decoration: InputDecoration(
-                              hintText: 'XXX XXXX XXXX',
-                              // counterText: '',
-                              hintStyle: TextStyle(color: Colors.grey.shade600),
-                              border: InputBorder.none),
-                        )));
-                  }),
+                Flexible(
+                  child: Consumer(
+                    builder: ((context, ref, child) {
+                      final selectCountryProv = ref.watch(countryListProvider);
+                      return SizedBox(
+                          height: 60,
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          child: Center(
+                              child: TextField(
+                            maxLength: selectCountryProv.maxlength,
+                            decoration: InputDecoration(
+                                hintText: 'XXX XXXX XXXX',
+                                // counterText: '',
+                                hintStyle: TextStyle(color: Colors.grey.shade600),
+                                border: InputBorder.none),
+                          )));
+                    }),
+                  ),
                 ),
               ],
             ),

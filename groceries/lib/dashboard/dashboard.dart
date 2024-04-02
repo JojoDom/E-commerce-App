@@ -1,7 +1,5 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get/get.dart';
 import 'package:groceries/providers/dashboard_controller.dart';
 import 'package:groceries/global_variables/global_variables.dart';
 import 'package:groceries/screens/account/account.dart';
@@ -10,8 +8,7 @@ import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/home/home.dart';
 import 'package:groceries/screens/search/search.dart';
-import 'package:huawei_push/huawei_push.dart' as hms;
-import 'package:logger/logger.dart';
+
 
 class Dashboard extends ConsumerStatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -23,59 +20,10 @@ class Dashboard extends ConsumerStatefulWidget {
 class _DashboardState extends ConsumerState<Dashboard> {
   List<Widget> pages = const [Home(), Favorites(), Cart(), Search(), Account()];
 
-  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
-
-  Future<void> setupInteractedMessage() async {
-    // Get any messages which caused the application to open from
-    // a terminated state.
-    RemoteMessage? initialMessage =
-        await FirebaseMessaging.instance.getInitialMessage();
-
-    if (initialMessage != null) {
-      _handleMessageBackground(initialMessage);
-    }
-
-    // Also handle any interaction when the app is in the background via a
-    // Stream listener
-    FirebaseMessaging.onMessageOpenedApp.listen(_handleMessageBackground);
-  }
-
-  void _handleMessageBackground(RemoteMessage message) {
-    RemoteNotification? notification = message.notification;
-    if (message.data["screen"] != null) {
-      Get.toNamed('/${message.data["screen"]}');
-    }
-
-    print("notification: $notification");
-    print("message data: ${message.data}");
-  }
-
-  void _handleMessageForeGround(RemoteMessage message) {
-    RemoteNotification? notification = message.notification;
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print("notification: $notification");
-      print("message data: ${message.data}");
-
-      // flutterLocalNotificationsPlugin?.show(notification.hashCode,
-      //      notification?.title, notification?.body, const NotificationDetails());
-    });
-  }
-
-  void initPlatformstate() {
-    Logger().i('HMS');
-    hms.Push.getTokenStream.listen((event) {
-      Logger().i('HMS');
-      Logger().i('HMS $event');
-    }).onData((data) {
-      Logger().i(" Data $data");
-    });
-  }
 
   @override
   void initState() {
     super.initState();
-    initPlatformstate();
-    setupInteractedMessage();
   }
 
   @override
@@ -138,7 +86,8 @@ class BottomNavItem extends StatelessWidget {
     return Consumer(
       builder: ((context, ref, child) {
         final currentIndex = ref.watch(page);
-        final cartCount = ref.watch(addToCart);
+       // final cartCount = ref.watch(addToCart);
+         final cartCount = ref.watch(cartCountProvider);
         return InkWell(
           onTap: () {
             ref.read(page.notifier).onPageChnaged(index);
@@ -157,7 +106,7 @@ class BottomNavItem extends StatelessWidget {
                           ? Colors.green
                           : const Color.fromARGB(255, 227, 227, 205),
                     ),
-                    cartCount.isNotEmpty && (index == 2)
+                    cartCount !=0 && (index == 2)
                         ? Positioned(
                             top: 3,
                             right: 3,
@@ -168,7 +117,7 @@ class BottomNavItem extends StatelessWidget {
                                     shape: BoxShape.circle, color: Colors.red),
                                 child: Center(
                                     child: Text(
-                                  cartCount.length.toString(),
+                                  cartCount.toString(),
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodySmall!

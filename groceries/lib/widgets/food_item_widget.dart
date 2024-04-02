@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:groceries/global_variables/global_variables.dart';
 import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import 'package:groceries/screens/details/details.dart';
+import 'package:logger/logger.dart';
 import '../models/food_model.dart';
 
 class FoodItemWidget extends ConsumerStatefulWidget {
@@ -22,6 +23,7 @@ class _FoodItemWidgetState extends ConsumerState<FoodItemWidget> {
   @override
   Widget build(BuildContext context) {
     final numberofItems = ref.watch(numberOfItemsProv);
+  
     return GestureDetector(
       onTap: () {
         ref.read(numberOfItemsProv.notifier).update((state) => 1);
@@ -67,17 +69,16 @@ class _FoodItemWidgetState extends ConsumerState<FoodItemWidget> {
               Positioned(
                 top: 0,
                 right: 0,
-                child: Consumer(
-                  builder: ((context, ref, child) {                                   
-                  return                 
-                  Visibility(
+                child: Consumer(builder: ((context, ref, child) {
+                  return Visibility(
                     visible: widget.foodData.favAndCart[1],
                     replacement: InkWell(
-                      onTap:  (() {
-                         setState(() {
-                            widget.foodData.favAndCart[1] = true;
-                          });                    
-                    ref.read(addToCart.notifier).addToCart([widget.foodData]);                  
+                      onTap: (() {
+                        setState(() {
+                          widget.foodData.favAndCart[1] = true;
+                        });
+                        ref.read(addToCart.notifier).addToCart(widget.foodData);
+                        ref.read(cartCountProvider.notifier).update((state) => state+1);
                       }),
                       child: Container(
                         height: 30,
@@ -95,10 +96,10 @@ class _FoodItemWidgetState extends ConsumerState<FoodItemWidget> {
                         if (widget.foodData.favAndCart[1]) {
                           setState(() {
                             widget.foodData.favAndCart[1] = false;
+                            ref.read(addToCart).removeWhere((element) =>
+                                element.title == widget.foodData.title);
+                          ref.read(cartCountProvider.notifier).update((state) => state-1);
                           });
-                          ref.read(addToCart.notifier).removeFromCart([widget.foodData]);
-                          //  ref.read(addToCart).removeWhere((element) =>
-                          //     element.title == widget.foodData.title);
                         }
                       },
                       child: Container(
@@ -112,8 +113,8 @@ class _FoodItemWidgetState extends ConsumerState<FoodItemWidget> {
                         ),
                       ),
                     ),
-                  );})
-                ),
+                  );
+                })),
               ),
               Positioned(
                   bottom: 0,
@@ -146,6 +147,4 @@ class _FoodItemWidgetState extends ConsumerState<FoodItemWidget> {
       ),
     );
   }
-
-   
 }

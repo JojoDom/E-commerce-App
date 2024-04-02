@@ -52,6 +52,7 @@ class _CartState extends ConsumerState<Cart> {
                                           (element) =>
                                               element.title ==
                                               ref.read(addToCart)[index].title);
+                                    ref.read(cartCountProvider.notifier).update((state) => state-1);
                                     },
                                     icon: const Icon(
                                       Icons.remove_circle,

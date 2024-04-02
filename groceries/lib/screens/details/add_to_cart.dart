@@ -75,7 +75,7 @@ class _AddToCartState extends ConsumerState<AddToCart> {
                         setState(() {
                         widget.foodsData.favAndCart[1] = true;
                       });
-                      ref.read(addToCart.notifier).addToCart([widget.foodsData]);
+                      ref.read(addToCart.notifier).addToCart(widget.foodsData);
                      
                       }
             },
