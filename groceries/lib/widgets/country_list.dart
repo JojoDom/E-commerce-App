@@ -19,6 +19,7 @@ class _CountryListState extends State<CountryList> {
 
   @override
   void initState() {
+    super.initState();
     FirebaseFirestore.instance
         .collection('countrylist')
         .get()
@@ -26,6 +27,7 @@ class _CountryListState extends State<CountryList> {
       querySnapshot.docs.forEach((doc) {
         Logger().i(doc["name"]);
         Logger().i(doc["imageUrl"]);
+        
       });
     });
   }
@@ -38,6 +40,7 @@ class _CountryListState extends State<CountryList> {
           stream: countryList,
           builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (snapshot.hasError) {
+              Logger().i(snapshot.error);
               return const Text('Something went wrong');
             }
 
