@@ -297,14 +297,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.4.2+1"
-  equatable:
-    dependency: transitive
-    description:
-      name: equatable
-      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -502,38 +494,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.1"
-  flutter_document_scanner:
-    dependency: "direct main"
-    description:
-      name: flutter_document_scanner
-      sha256: "1358d771ef508820fdfcdd734c716c85f186dba0974ec00719a81176c21c17ae"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-  flutter_document_scanner_android:
-    dependency: transitive
-    description:
-      name: flutter_document_scanner_android
-      sha256: "57a2cd9eb32f1a1a444b675b18323d26bc6f48b26acb7ce60ad08e0a1ac103ce"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-  flutter_document_scanner_ios:
-    dependency: transitive
-    description:
-      name: flutter_document_scanner_ios
-      sha256: "5f7452274d0ca919e9a5c0533572e663f72e831a3bee0f59faec91d8916e2a37"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
-  flutter_document_scanner_platform_interface:
-    dependency: transitive
-    description:
-      name: flutter_document_scanner_platform_interface
-      sha256: "14b1c65d4db532e22c004e2b526ebeaa9fe313c432e0282a435ae3f5860ee99f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   flutter_dotenv:
     dependency: "direct main"
     description:
