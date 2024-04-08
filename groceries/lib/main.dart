@@ -10,6 +10,7 @@ import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/login.dart';
 import 'package:groceries/theme/themes.dart';
 import 'package:groceries/theme/themes_controller.dart';
+import 'package:groceries/utilities/initializer.dart';
 import 'package:groceries/utilities/messaging_services.dart';
 import 'package:groceries/utilities/firebase_service.dart';
 import 'package:groceries/utilities/huawei_services.dart';
@@ -20,6 +21,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
     await GetStorage.init();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Initializer.init();
   getDeviceModel();
   setUpNotification();
   runApp(const ProviderScope(child:  MyApp()));

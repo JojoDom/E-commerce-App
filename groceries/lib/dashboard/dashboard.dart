@@ -7,6 +7,7 @@ import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/cart/cart_controller/cart_controller.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
 import 'package:groceries/screens/home/home.dart';
+import 'package:groceries/screens/search/image_scanner.dart';
 import 'package:groceries/screens/search/search.dart';
 
 
@@ -18,7 +19,7 @@ class Dashboard extends ConsumerStatefulWidget {
 }
 
 class _DashboardState extends ConsumerState<Dashboard> {
-  List<Widget> pages = const [Home(), Favorites(), Cart(), Search(), Account()];
+  List<Widget> pages = const [Home(), Favorites(), Cart(), ExtractText(), Account()];
 
 
   @override

@@ -1,51 +1,41 @@
-import 'dart:io';
-import 'package:groceries/utilities/ocr_text_extraction.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get/get.dart';
 import 'package:groceries/providers/kyc_provider.dart';
-import 'package:groceries/screens/account/verify_account_details.dart';
 import 'package:groceries/utilities/initializer.dart';
-import 'package:logger/logger.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 
-
-
-class Account extends ConsumerStatefulWidget {
-  const Account({Key? key}) : super(key: key);
+class ExtractText extends ConsumerStatefulWidget {
+  const ExtractText({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<Account> createState() => _AccountState();
+  ConsumerState<ExtractText> createState() => _ExtractTextState();
 }
 
-class _AccountState extends ConsumerState<Account> {
+class _ExtractTextState extends ConsumerState<ExtractText> {
   late CameraController cameraController;
   late List<CameraDescription> cameras;
    late Future<void> _initializeControllerFuture;
 
-  @override
+    @override
    void initState(){
     super.initState();
      initializeCamera();
      _initializeControllerFuture = cameraController.initialize();
      WidgetsFlutterBinding.ensureInitialized();
    }
-
-    initializeCamera() async {
+   initializeCamera() async {
      cameraController = CameraController(
         Initializer.cameras[0], ResolutionPreset.max,
         enableAudio: true);   
     cameraController.lockCaptureOrientation();
     cameraController.setFlashMode(FlashMode.off);
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Ocr Test')),
-      body: FutureBuilder<void>(
+      appBar: AppBar(title: const Text('Extract Text')),
+      body: 
+        FutureBuilder<void>(
         future: _initializeControllerFuture,
         builder: (context, snapshot) {
            if(snapshot.connectionState == ConnectionState.done){
@@ -108,21 +98,6 @@ class _AccountState extends ConsumerState<Account> {
                               ),
                             ),),
 
-                            Positioned(
-                      left: 20,
-                      bottom: 27,
-                      child: InkWell(
-                        onTap: () {
-                          _pickImage();
-                        },
-                        child: Container(
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Icon(Icons.image,color: Colors.white,)),
-                      ))
-
               ],
             );
            }else{
@@ -142,39 +117,13 @@ class _AccountState extends ConsumerState<Account> {
            }
         },
       )
+      
     );
   }
   
-  Future<void> _scanImage() async{
+   Future<void> _scanImage() async{
     final imageCaptured = await cameraController.takePicture(); 
     ref.read(cardImageProvider.notifier).update((state) => imageCaptured);
-    final inputImage = InputImage.fromFile(File(imageCaptured.path));
-    final textrecognizer = TextRecognizer(script: TextRecognitionScript.latin);
-    final RecognizedText recognizedText = await textrecognizer.processImage(inputImage);
-    var blocks = recognizedText.blocks;
-    var lines = recognizedText.text;
-   Logger().i(lines);
-  var textLines = await extractText(lines);
-   ref.read(cardDetailsProvider.notifier).update((state) => textLines);
-    Get.to(const VerifyAccountDetails());
-}
-
-Future<void>_pickImage()async{
-  final ImagePicker picker = ImagePicker();
-    XFile? pickedImage = await picker.pickImage(source: ImageSource.gallery);
-    ref.read(cardImageProvider.notifier).update((state) => pickedImage);
-    final inputImage = InputImage.fromFile(File(pickedImage!.path));
-    final textrecognizer = TextRecognizer(script: TextRecognitionScript.latin);
-    final RecognizedText recognizedText = await textrecognizer.processImage(inputImage);
-    var blocks = recognizedText.blocks;
-    var lines = recognizedText.text;
-   Logger().i(lines);
-   var textLines = await extractText(lines);
-   ref.read(cardDetailsProvider.notifier).update((state) => textLines);
-    Get.to(const VerifyAccountDetails());
+    
 }
 }
-
-
-
-
