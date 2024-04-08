@@ -1,0 +1,1149 @@
+{
+    "status": "success",
+    "id": "e1b13a3b-915e-42e4-bf52-cb3c326c488b",
+    "documents": [
+        {
+            "id": "2868483",
+            "type": "invoice",
+            "version": "1.2",
+            "pages": [
+                {
+                    "fileIdx": 0,
+                    "offset": 0,
+                    "count": 1
+                }
+            ],
+            "nationalityNationalite": {
+                "type": "string",
+                "value": "GHANAIAN"
+            },
+            "firstnamesPrénoms": {
+                "type": "string",
+                "value": "ADWOA DOM"
+            },
+            "sexSexe": {
+                "type": "string",
+                "value": "F"
+            },
+            "dateOfExpiryDateDexpiration": {
+                "type": "string",
+                "value": "09/01/2030"
+            },
+            "personalIDNumber": {
+                "type": "string",
+                "value": "GNA-000240260.4"
+            },
+            "f6CumentNumberNumeroDuDocument": {
+                "type": "string",
+                "value": "AJ4559233"
+            },
+            "surnameNom": {
+                "type": "string",
+                "value": "DADSON"
+            },
+            "dateOfIssuanceDateDemission": {
+                "type": "string",
+                "value": "01/2020"
+            },
+            "heighutAillem": {
+                "type": "string",
+                "value": "1.6"
+            },
+            "dateOfBirthDateDeNaissance": {
+                "type": "string",
+                "value": "16/03/1998"
+            },
+            "placeOfIssuanceLieuDeDelivRance": {
+                "type": "string",
+                "value": "ACCRA"
+            },
+            "categorizedUrl": "https://dkseun49-msqjdnsd.s3.eu-central-1.amazonaws.com/sdf/prod/users/9138/document/2024-04-08T13_49_21_843Z_ca7f7df3-7779-47f4-b38a-b9ecc7f02561_splitted.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAV3WNTZDYXELUKXI3%2F20240408%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20240408T000000Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&recognizingFinished=1712584175363&X-Amz-Signature=e1b551ab9f780ace604efb8735927ab29354f9b7192f5030bc87d44b70810bc7",
+            "plainTextBase64": "ICAgICAgICAgICAgICAgICAgICAgRUNPV0FTIElERU5USVRZICAgICAgICAgICAgICAgICAgICAgICAgICBDQVJECiAgICAgICAgICAgICAgICAgICAgIENBUlRFIEQnIElERU5USVRFQ0VERUFPL0JJTEhFVEVERSBJREVOVElEQURFQ0VERUFPCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBSRVBVQkxJQyBPRiAgICAgICAgICBHSEFOQQogICAgICAgICAgICAgICAgICAgICAgICBTdXJuYW1lL05vbQogICAgICAgICAgICAgICAgICAgICAgICAgREFEU09OCiAgICAgICAgICAgICAgICAgICAgICAgICBGaXJzdG5hbWVzIFByw6lub21zCiAgICAgICAgICAgICAgICAgICAgICAgICBBRFdPQSBET00KICAgICAgICAgICAgICAgICAgICAgICAgIFByZXZpb3VzIE5hbWUocykvTm9tcyBQcsOpY2VkZW50cwogICAgICAgICAgICAgICAgICAgICAgICAgTmF0aW9uYWxpdHkgTmF0aW9uYWxpdGUgICAgIFNleC9TZXhlCiAgICAgICAgICAgICAgICAgICAgICAgICBHSEFOQUlBTiAgICAgICAgICAgICAgICAgICAgICAgRgogICAgICAgICAgICAgICAgICAgICAgICAgRGF0ZSBvZiBCaXJ0aC9EYXRlZGVOYWlzc2FuY2UKICAgICAgICAgICAgICAgICAgICAgICAgIDE2LzAzLzE5OTgKICAgICAgICAgICAgICAgICAgICAgICAgIFBlcnNvbmFsIElEIE51bWJlciAgICAgICAgICBIZWlnaHV0IGFpbGxlKG0pCiAgICAgICAgICAgICAgICAgICAgICAgICBHTkEtMDAwMjQwMjYwLjQgICAgICAgICAgICAgICAgMS42CiAgICAgICAgICAgICAgICAgICAgICAgICA2IGN1bWVudCAgTnVtYmVyL051bWVybyAgZHUgZG9jdW1lbnQKICAgICAgICAgICAgICAgICAgICAgICAgIEFKNDU1OTIzMwogICAgICAgICAgICAgICAgICAgICAgICAgUGxhY2Ugb2YgaXNzdWFuY2UvTGlldWRlZGVsaXZyYW5jZQogICAgICAgICAgICAgICAgICAgICAgICAgQUNDUkEKICAgICAgICAgICAgICAgICAgICAgICAgIERhdGUgb2YgSXNzdWFuY2UvRGF0ZWQnZW1pc3Npb24KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMDEvMjAyMAogICAgICAgICAgICAgICAgICAgICAgICAgRGF0ZSBvZiBFeHBpcnlEYXRlZCdleHBpcmF0aW9uICAgICAgICAgICAgICAgICAgICAgMzIxNjEwCiAgICAgICAgICAgICAgICAgICAgICAgICAwOS8wMS8yMDMwCg==",
+            "validationChecks": {
+                "result": 0,
+                "validations": {}
+            },
+            "textAnnotation": {
+                "Pages": [
+                    {
+                        "ClockwiseOrientation": 359.18845,
+                        "Words": [
+                            {
+                                "Id": "638481806602291334",
+                                "Text": "ECOWAS",
+                                "Outline": [
+                                    0.20619,
+                                    0.30102,
+                                    0.38273,
+                                    0.30102,
+                                    0.38273,
+                                    0.32879,
+                                    0.20619,
+                                    0.32879
+                                ],
+                                "Confidence": 0.9987,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291335",
+                                "Text": "IDENTITY",
+                                "Outline": [
+                                    0.39626,
+                                    0.30346,
+                                    0.58505,
+                                    0.30346,
+                                    0.58505,
+                                    0.33074,
+                                    0.39626,
+                                    0.33074
+                                ],
+                                "Confidence": 0.9976,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291336",
+                                "Text": "CARD",
+                                "Outline": [
+                                    0.59923,
+                                    0.30395,
+                                    0.70683,
+                                    0.30395,
+                                    0.70683,
+                                    0.33074,
+                                    0.59923,
+                                    0.33074
+                                ],
+                                "Confidence": 0.9993,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291337",
+                                "Text": "CARTE",
+                                "Outline": [
+                                    0.20683,
+                                    0.33561,
+                                    0.26353,
+                                    0.33561,
+                                    0.26353,
+                                    0.34925,
+                                    0.20683,
+                                    0.34925
+                                ],
+                                "Confidence": 0.9984,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291338",
+                                "Text": "D'",
+                                "Outline": [
+                                    0.26804,
+                                    0.33609,
+                                    0.28222,
+                                    0.33609,
+                                    0.28222,
+                                    0.34925,
+                                    0.26804,
+                                    0.34925
+                                ],
+                                "Confidence": 0.9513,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291339",
+                                "Text": "IDENTITE",
+                                "Outline": [
+                                    0.28608,
+                                    0.33658,
+                                    0.35245,
+                                    0.33658,
+                                    0.35245,
+                                    0.34973,
+                                    0.28608,
+                                    0.34973
+                                ],
+                                "Confidence": 0.9934,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291340",
+                                "Text": "CEDEAO",
+                                "Outline": [
+                                    0.35567,
+                                    0.33707,
+                                    0.42397,
+                                    0.33707,
+                                    0.42397,
+                                    0.35022,
+                                    0.35567,
+                                    0.35022
+                                ],
+                                "Confidence": 0.9617,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291341",
+                                "Text": "/",
+                                "Outline": [
+                                    0.42719,
+                                    0.33707,
+                                    0.43299,
+                                    0.33707,
+                                    0.43299,
+                                    0.35022,
+                                    0.42719,
+                                    0.35022
+                                ],
+                                "Confidence": 0.785,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291342",
+                                "Text": "BILHETE",
+                                "Outline": [
+                                    0.43814,
+                                    0.33755,
+                                    0.50451,
+                                    0.33755,
+                                    0.50451,
+                                    0.35071,
+                                    0.43814,
+                                    0.35071
+                                ],
+                                "Confidence": 0.9763,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291343",
+                                "Text": "DE",
+                                "Outline": [
+                                    0.50966,
+                                    0.33804,
+                                    0.53028,
+                                    0.33804,
+                                    0.53028,
+                                    0.35119,
+                                    0.50966,
+                                    0.35119
+                                ],
+                                "Confidence": 0.9979,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291344",
+                                "Text": "IDENTIDADE",
+                                "Outline": [
+                                    0.53544,
+                                    0.33804,
+                                    0.63209,
+                                    0.33804,
+                                    0.63209,
+                                    0.35119,
+                                    0.53544,
+                                    0.35119
+                                ],
+                                "Confidence": 0.9799,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291345",
+                                "Text": "CEDEAO",
+                                "Outline": [
+                                    0.63531,
+                                    0.33804,
+                                    0.70296,
+                                    0.33804,
+                                    0.70296,
+                                    0.35119,
+                                    0.63531,
+                                    0.35119
+                                ],
+                                "Confidence": 0.9626,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291346",
+                                "Text": "REPUBLIC",
+                                "Outline": [
+                                    0.30477,
+                                    0.35704,
+                                    0.45296,
+                                    0.35704,
+                                    0.45296,
+                                    0.37409,
+                                    0.30477,
+                                    0.37409
+                                ],
+                                "Confidence": 0.9992,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291347",
+                                "Text": "OF",
+                                "Outline": [
+                                    0.46263,
+                                    0.35801,
+                                    0.50064,
+                                    0.35801,
+                                    0.50064,
+                                    0.37506,
+                                    0.46263,
+                                    0.37506
+                                ],
+                                "Confidence": 0.9999,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291348",
+                                "Text": "GHANA",
+                                "Outline": [
+                                    0.50966,
+                                    0.35801,
+                                    0.61405,
+                                    0.35801,
+                                    0.61405,
+                                    0.37506,
+                                    0.50966,
+                                    0.37506
+                                ],
+                                "Confidence": 0.9992,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291349",
+                                "Text": "Surname/Nom",
+                                "Outline": [
+                                    0.24098,
+                                    0.39649,
+                                    0.36985,
+                                    0.39649,
+                                    0.36985,
+                                    0.40818,
+                                    0.24098,
+                                    0.40818
+                                ],
+                                "Confidence": 0.6448,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291350",
+                                "Text": "DADSON",
+                                "Outline": [
+                                    0.24291,
+                                    0.41354,
+                                    0.36405,
+                                    0.41354,
+                                    0.36405,
+                                    0.42864,
+                                    0.24291,
+                                    0.42864
+                                ],
+                                "Confidence": 0.9991,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291351",
+                                "Text": "Firstnames",
+                                "Outline": [
+                                    0.24227,
+                                    0.4301,
+                                    0.34343,
+                                    0.4301,
+                                    0.34343,
+                                    0.44179,
+                                    0.24227,
+                                    0.44179
+                                ],
+                                "Confidence": 0.9827,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291352",
+                                "Text": "Prénoms",
+                                "Outline": [
+                                    0.34794,
+                                    0.43108,
+                                    0.42848,
+                                    0.43108,
+                                    0.42848,
+                                    0.44228,
+                                    0.34794,
+                                    0.44228
+                                ],
+                                "Confidence": 0.8945,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291353",
+                                "Text": "ADWOA",
+                                "Outline": [
+                                    0.24356,
+                                    0.44861,
+                                    0.3518,
+                                    0.44861,
+                                    0.3518,
+                                    0.46322,
+                                    0.24356,
+                                    0.46322
+                                ],
+                                "Confidence": 0.975,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291354",
+                                "Text": "DOM",
+                                "Outline": [
+                                    0.36147,
+                                    0.44861,
+                                    0.42397,
+                                    0.44861,
+                                    0.42397,
+                                    0.46322,
+                                    0.36147,
+                                    0.46322
+                                ],
+                                "Confidence": 0.9969,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291356",
+                                "Text": "Name(s)/Noms",
+                                "Outline": [
+                                    0.32861,
+                                    0.4642,
+                                    0.45619,
+                                    0.4642,
+                                    0.45619,
+                                    0.47784,
+                                    0.32861,
+                                    0.47784
+                                ],
+                                "Confidence": 0.748,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291355",
+                                "Text": "Previous",
+                                "Outline": [
+                                    0.24227,
+                                    0.46469,
+                                    0.32281,
+                                    0.46469,
+                                    0.32281,
+                                    0.4754,
+                                    0.24227,
+                                    0.4754
+                                ],
+                                "Confidence": 0.9876,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291357",
+                                "Text": "Précedents",
+                                "Outline": [
+                                    0.46005,
+                                    0.46469,
+                                    0.55992,
+                                    0.46469,
+                                    0.55992,
+                                    0.47589,
+                                    0.46005,
+                                    0.47589
+                                ],
+                                "Confidence": 0.8694,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291360",
+                                "Text": "Sex/Sexe",
+                                "Outline": [
+                                    0.51869,
+                                    0.49732,
+                                    0.60052,
+                                    0.49732,
+                                    0.60052,
+                                    0.5095,
+                                    0.51869,
+                                    0.5095
+                                ],
+                                "Confidence": 0.9797,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291359",
+                                "Text": "Nationalite",
+                                "Outline": [
+                                    0.34149,
+                                    0.49781,
+                                    0.43492,
+                                    0.49781,
+                                    0.43492,
+                                    0.5095,
+                                    0.34149,
+                                    0.5095
+                                ],
+                                "Confidence": 0.7487,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291358",
+                                "Text": "Nationality",
+                                "Outline": [
+                                    0.24227,
+                                    0.4983,
+                                    0.33763,
+                                    0.4983,
+                                    0.33763,
+                                    0.51193,
+                                    0.24227,
+                                    0.51193
+                                ],
+                                "Confidence": 0.9891,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291362",
+                                "Text": "F",
+                                "Outline": [
+                                    0.54381,
+                                    0.51486,
+                                    0.55863,
+                                    0.51486,
+                                    0.55863,
+                                    0.52947,
+                                    0.54381,
+                                    0.52947
+                                ],
+                                "Confidence": 0.998,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291361",
+                                "Text": "GHANAIAN",
+                                "Outline": [
+                                    0.2442,
+                                    0.51534,
+                                    0.3982,
+                                    0.51534,
+                                    0.3982,
+                                    0.53142,
+                                    0.2442,
+                                    0.53142
+                                ],
+                                "Confidence": 0.9958,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291366",
+                                "Text": "de",
+                                "Outline": [
+                                    0.40528,
+                                    0.5319,
+                                    0.4259,
+                                    0.5319,
+                                    0.4259,
+                                    0.54311,
+                                    0.40528,
+                                    0.54311
+                                ],
+                                "Confidence": 0.9951,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291365",
+                                "Text": "Birth/Date",
+                                "Outline": [
+                                    0.31121,
+                                    0.5319,
+                                    0.40013,
+                                    0.5319,
+                                    0.40013,
+                                    0.54408,
+                                    0.31121,
+                                    0.54408
+                                ],
+                                "Confidence": 0.9867,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291367",
+                                "Text": "Naissance",
+                                "Outline": [
+                                    0.43106,
+                                    0.5319,
+                                    0.52191,
+                                    0.5319,
+                                    0.52191,
+                                    0.54311,
+                                    0.43106,
+                                    0.54311
+                                ],
+                                "Confidence": 0.9831,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291363",
+                                "Text": "Date",
+                                "Outline": [
+                                    0.2442,
+                                    0.53239,
+                                    0.28351,
+                                    0.53239,
+                                    0.28351,
+                                    0.54408,
+                                    0.2442,
+                                    0.54408
+                                ],
+                                "Confidence": 0.9839,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291364",
+                                "Text": "of",
+                                "Outline": [
+                                    0.28995,
+                                    0.53337,
+                                    0.30799,
+                                    0.53337,
+                                    0.30799,
+                                    0.54359,
+                                    0.28995,
+                                    0.54359
+                                ],
+                                "Confidence": 0.9947,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291368",
+                                "Text": "16/03/1998",
+                                "Outline": [
+                                    0.24742,
+                                    0.54895,
+                                    0.39562,
+                                    0.54895,
+                                    0.39562,
+                                    0.56454,
+                                    0.24742,
+                                    0.56454
+                                ],
+                                "Confidence": 0.878,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291372",
+                                "Text": "Heighut",
+                                "Outline": [
+                                    0.51933,
+                                    0.56308,
+                                    0.59085,
+                                    0.56308,
+                                    0.59085,
+                                    0.57964,
+                                    0.51933,
+                                    0.57964
+                                ],
+                                "Confidence": 0.4547,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291373",
+                                "Text": "aille(m)",
+                                "Outline": [
+                                    0.59214,
+                                    0.56357,
+                                    0.65335,
+                                    0.56357,
+                                    0.65335,
+                                    0.5772,
+                                    0.59214,
+                                    0.5772
+                                ],
+                                "Confidence": 0.5014,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291369",
+                                "Text": "Personal",
+                                "Outline": [
+                                    0.24291,
+                                    0.56551,
+                                    0.32345,
+                                    0.56551,
+                                    0.32345,
+                                    0.5772,
+                                    0.24291,
+                                    0.5772
+                                ],
+                                "Confidence": 0.9892,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291370",
+                                "Text": "ID",
+                                "Outline": [
+                                    0.32925,
+                                    0.566,
+                                    0.34665,
+                                    0.566,
+                                    0.34665,
+                                    0.57672,
+                                    0.32925,
+                                    0.57672
+                                ],
+                                "Confidence": 0.9988,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291371",
+                                "Text": "Number",
+                                "Outline": [
+                                    0.35245,
+                                    0.566,
+                                    0.42204,
+                                    0.566,
+                                    0.42204,
+                                    0.57623,
+                                    0.35245,
+                                    0.57623
+                                ],
+                                "Confidence": 0.9992,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291375",
+                                "Text": "1.6",
+                                "Outline": [
+                                    0.54446,
+                                    0.58061,
+                                    0.58505,
+                                    0.58061,
+                                    0.58505,
+                                    0.59571,
+                                    0.54446,
+                                    0.59571
+                                ],
+                                "Confidence": 0.5418,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291374",
+                                "Text": "GNA-000240260.4",
+                                "Outline": [
+                                    0.24613,
+                                    0.5811,
+                                    0.49356,
+                                    0.5811,
+                                    0.49356,
+                                    0.59766,
+                                    0.24613,
+                                    0.59766
+                                ],
+                                "Confidence": 0.2395,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291380",
+                                "Text": "document",
+                                "Outline": [
+                                    0.51546,
+                                    0.59669,
+                                    0.60374,
+                                    0.59669,
+                                    0.60374,
+                                    0.60887,
+                                    0.51546,
+                                    0.60887
+                                ],
+                                "Confidence": 0.98,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291379",
+                                "Text": "du",
+                                "Outline": [
+                                    0.48905,
+                                    0.59815,
+                                    0.50966,
+                                    0.59815,
+                                    0.50966,
+                                    0.60838,
+                                    0.48905,
+                                    0.60838
+                                ],
+                                "Confidence": 0.993,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291378",
+                                "Text": "Number/Numero",
+                                "Outline": [
+                                    0.34021,
+                                    0.59864,
+                                    0.48325,
+                                    0.59864,
+                                    0.48325,
+                                    0.61033,
+                                    0.34021,
+                                    0.61033
+                                ],
+                                "Confidence": 0.8964,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291377",
+                                "Text": "cument",
+                                "Outline": [
+                                    0.26933,
+                                    0.60058,
+                                    0.33698,
+                                    0.60058,
+                                    0.33698,
+                                    0.61179,
+                                    0.26933,
+                                    0.61179
+                                ],
+                                "Confidence": 0.6375,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291376",
+                                "Text": "6",
+                                "Outline": [
+                                    0.24356,
+                                    0.60205,
+                                    0.26482,
+                                    0.60205,
+                                    0.26482,
+                                    0.61227,
+                                    0.24356,
+                                    0.61227
+                                ],
+                                "Confidence": 0.4151,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291381",
+                                "Text": "AJ4559233",
+                                "Outline": [
+                                    0.24356,
+                                    0.61617,
+                                    0.40077,
+                                    0.61617,
+                                    0.40077,
+                                    0.63273,
+                                    0.24356,
+                                    0.63273
+                                ],
+                                "Confidence": 0.9943,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291386",
+                                "Text": "deliv",
+                                "Outline": [
+                                    0.47552,
+                                    0.63078,
+                                    0.51611,
+                                    0.63078,
+                                    0.51611,
+                                    0.6415,
+                                    0.47552,
+                                    0.6415
+                                ],
+                                "Confidence": 0.8619,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291387",
+                                "Text": "rance",
+                                "Outline": [
+                                    0.51804,
+                                    0.63078,
+                                    0.56443,
+                                    0.63078,
+                                    0.56443,
+                                    0.6415,
+                                    0.51804,
+                                    0.6415
+                                ],
+                                "Confidence": 0.4219,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291384",
+                                "Text": "issuance/Lieu",
+                                "Outline": [
+                                    0.32023,
+                                    0.63176,
+                                    0.44394,
+                                    0.63176,
+                                    0.44394,
+                                    0.64394,
+                                    0.32023,
+                                    0.64394
+                                ],
+                                "Confidence": 0.5933,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291385",
+                                "Text": "de",
+                                "Outline": [
+                                    0.44781,
+                                    0.63176,
+                                    0.46972,
+                                    0.63176,
+                                    0.46972,
+                                    0.64199,
+                                    0.44781,
+                                    0.64199
+                                ],
+                                "Confidence": 0.9777,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291383",
+                                "Text": "of",
+                                "Outline": [
+                                    0.29768,
+                                    0.63273,
+                                    0.31637,
+                                    0.63273,
+                                    0.31637,
+                                    0.64442,
+                                    0.29768,
+                                    0.64442
+                                ],
+                                "Confidence": 0.9977,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291382",
+                                "Text": "Place",
+                                "Outline": [
+                                    0.24356,
+                                    0.63371,
+                                    0.29317,
+                                    0.63371,
+                                    0.29317,
+                                    0.64491,
+                                    0.24356,
+                                    0.64491
+                                ],
+                                "Confidence": 0.9937,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291388",
+                                "Text": "ACCRA",
+                                "Outline": [
+                                    0.24485,
+                                    0.65075,
+                                    0.34601,
+                                    0.65075,
+                                    0.34601,
+                                    0.66585,
+                                    0.24485,
+                                    0.66585
+                                ],
+                                "Confidence": 0.9938,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291392",
+                                "Text": "d'emission",
+                                "Outline": [
+                                    0.44072,
+                                    0.66439,
+                                    0.53673,
+                                    0.66439,
+                                    0.53673,
+                                    0.67511,
+                                    0.44072,
+                                    0.67511
+                                ],
+                                "Confidence": 0.8426,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291391",
+                                "Text": "Issuance/Date",
+                                "Outline": [
+                                    0.30992,
+                                    0.66537,
+                                    0.43686,
+                                    0.66537,
+                                    0.43686,
+                                    0.67755,
+                                    0.30992,
+                                    0.67755
+                                ],
+                                "Confidence": 0.7343,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291389",
+                                "Text": "Date",
+                                "Outline": [
+                                    0.24356,
+                                    0.66732,
+                                    0.28415,
+                                    0.66732,
+                                    0.28415,
+                                    0.67852,
+                                    0.24356,
+                                    0.67852
+                                ],
+                                "Confidence": 0.9992,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291390",
+                                "Text": "of",
+                                "Outline": [
+                                    0.2893,
+                                    0.66732,
+                                    0.30735,
+                                    0.66732,
+                                    0.30735,
+                                    0.67803,
+                                    0.2893,
+                                    0.67803
+                                ],
+                                "Confidence": 0.9986,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291393",
+                                "Text": "01/2020",
+                                "Outline": [
+                                    0.28995,
+                                    0.6829,
+                                    0.39562,
+                                    0.6829,
+                                    0.39562,
+                                    0.69849,
+                                    0.28995,
+                                    0.69849
+                                ],
+                                "Confidence": 0.9827,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291398",
+                                "Text": "d'expiration",
+                                "Outline": [
+                                    0.41946,
+                                    0.698,
+                                    0.52255,
+                                    0.698,
+                                    0.52255,
+                                    0.71213,
+                                    0.41946,
+                                    0.71213
+                                ],
+                                "Confidence": 0.9723,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291396",
+                                "Text": "Expiry",
+                                "Outline": [
+                                    0.31186,
+                                    0.69995,
+                                    0.36985,
+                                    0.69995,
+                                    0.36985,
+                                    0.71408,
+                                    0.31186,
+                                    0.71408
+                                ],
+                                "Confidence": 0.9964,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291397",
+                                "Text": "Date",
+                                "Outline": [
+                                    0.37307,
+                                    0.69995,
+                                    0.41366,
+                                    0.69995,
+                                    0.41366,
+                                    0.71115,
+                                    0.37307,
+                                    0.71115
+                                ],
+                                "Confidence": 0.9904,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291395",
+                                "Text": "of",
+                                "Outline": [
+                                    0.2893,
+                                    0.70093,
+                                    0.30735,
+                                    0.70093,
+                                    0.30735,
+                                    0.71213,
+                                    0.2893,
+                                    0.71213
+                                ],
+                                "Confidence": 0.9996,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291394",
+                                "Text": "Date",
+                                "Outline": [
+                                    0.2442,
+                                    0.7019,
+                                    0.28415,
+                                    0.7019,
+                                    0.28415,
+                                    0.71262,
+                                    0.2442,
+                                    0.71262
+                                ],
+                                "Confidence": 0.9994,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291400",
+                                "Text": "321610",
+                                "Outline": [
+                                    0.74356,
+                                    0.70434,
+                                    0.84149,
+                                    0.70434,
+                                    0.84149,
+                                    0.71943,
+                                    0.74356,
+                                    0.71943
+                                ],
+                                "Confidence": 0.9541,
+                                "Lang": "eng"
+                            },
+                            {
+                                "Id": "638481806602291399",
+                                "Text": "09/01/2030",
+                                "Outline": [
+                                    0.2442,
+                                    0.71359,
+                                    0.39626,
+                                    0.71359,
+                                    0.39626,
+                                    0.72918,
+                                    0.2442,
+                                    0.72918
+                                ],
+                                "Confidence": 0.8967,
+                                "Lang": "eng"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

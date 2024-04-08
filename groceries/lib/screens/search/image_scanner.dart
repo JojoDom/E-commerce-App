@@ -1,20 +1,28 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 import 'package:groceries/providers/kyc_provider.dart';
+import 'package:groceries/screens/search/ocr_provider/ocr_provider.dart';
+import 'package:groceries/screens/search/ocr_provider/response.dart';
 import 'package:groceries/utilities/initializer.dart';
+import 'package:logger/logger.dart';
 
-class ExtractText extends ConsumerStatefulWidget {
+class ExtractText extends StatefulWidget {
   const ExtractText({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<ExtractText> createState() => _ExtractTextState();
+  State<ExtractText> createState() => _ExtractTextState();
 }
 
-class _ExtractTextState extends ConsumerState<ExtractText> {
+class _ExtractTextState extends State<ExtractText> {
   late CameraController cameraController;
   late List<CameraDescription> cameras;
    late Future<void> _initializeControllerFuture;
+  var  imageController  = Get.put(ExtractImageController());
 
     @override
    void initState(){
@@ -123,7 +131,10 @@ class _ExtractTextState extends ConsumerState<ExtractText> {
   
    Future<void> _scanImage() async{
     final imageCaptured = await cameraController.takePicture(); 
-    ref.read(cardImageProvider.notifier).update((state) => imageCaptured);
-    
+    // ref.read(cardImageProvider.notifier).update((state) => imageCaptured);
+    final imageBytes = File(imageCaptured.path).readAsBytesSync();
+    String imgBase64 = base64Encode(imageBytes);
+    Logger().i(imgBase64);
+    Get.to( OcrRrsponse(image:imgBase64));
 }
 }
