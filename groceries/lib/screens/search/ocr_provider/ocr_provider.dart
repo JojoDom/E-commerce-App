@@ -6,6 +6,7 @@ import 'package:groceries/screens/search/data_model/ocr_fullmodel.dart';
 import 'package:groceries/services/api_service.dart';
 import 'package:logger/logger.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 
 
@@ -48,9 +49,11 @@ class ExtractImageController extends GetxController{
 
     
 
-    await apiService.post(body).then((value) {
+    
+    //await apiService.post(body).then((value) {
       try{
-       extractedTexts.value = value['documents'];
+        String value = await rootBundle.loadString('assets/data.json');
+       extractedTexts.value = jsonDecode(value);
        extractedStrings.value = extractedTexts.toString();
 
       extractedStrings
@@ -83,12 +86,12 @@ class ExtractImageController extends GetxController{
         Logger().e(error);
         Logger().i(stackTrace);
       }
-    }).onError((error, stackTrace) {
-       isFetching(false);
-      update();
-      Logger().e(error);
-      Logger().e(stackTrace);
-    });
+    // }).onError((error, stackTrace) {
+    //    isFetching(false);
+    //   update();
+    //   Logger().e(error);
+    //   Logger().e(stackTrace);
+    // });
    
   }
 

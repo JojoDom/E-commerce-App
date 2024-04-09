@@ -24,6 +24,16 @@ Future<List<String>>extractText(String lines)async{
    var text13 = StringSimilarity.findBestMatch("Place of Issuance Lieu de délivrance", rawText);
    var text14 = StringSimilarity.findBestMatch("Date of Issuance Dare d'émission", rawText);
    var text15 = StringSimilarity.findBestMatch("Date of Expiry Date d'expiration", rawText);
+   var text16 = StringSimilarity.findBestMatch("THIS CARD IS THE PROPERTY OF THE GOVERNMENT OF THE REPUBLIC OF GHANA", rawText);
+   var text17 = StringSimilarity.findBestMatch("IF FOUND PLEASE CONTACT THE NEAREST NIA OFFICE OR POLICE STATION", rawText);
+   var text18 = StringSimilarity.findBestMatch("CETE CARTE EST LA PROPRIÉTÉ DU GOUVERNEMENT DE LA RÉPUBLIQUE DU", rawText);
+    var text19 = StringSimilarity.findBestMatch("CHANA SI TROUVEE, VEUILLEZ CONTACTER LE BUREAU DE NIÁLE PLUS", rawText);
+   var text20 = StringSimilarity.findBestMatch("PROCHE OU LA POLICE", rawText);
+   var text21 = StringSimilarity.findBestMatch("NATIONAL IDENTIFICATION AUTHORITY", rawText);
+    var text22 = StringSimilarity.findBestMatch("Signature", rawText);
+   
+
+
      
     for (int i =0; i< rawText.length; i++){
         if(rawText[i].contains(text1.bestMatch.target!)){
@@ -83,6 +93,34 @@ Future<List<String>>extractText(String lines)async{
            Logger().i(rawText.toString());
         }
          if(rawText[i].contains(text15.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text16.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text17.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text18.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text19.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text20.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text21.bestMatch.target!)){
+          rawText.remove(rawText[i]);
+           Logger().i(rawText.toString());
+        }  
+        if(rawText[i].contains(text22.bestMatch.target!)){
           rawText.remove(rawText[i]);
            Logger().i(rawText.toString());
         }                     

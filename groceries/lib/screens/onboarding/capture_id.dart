@@ -13,14 +13,13 @@ import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart
 
 
 
-class Account extends ConsumerStatefulWidget {
-  const Account({Key? key}) : super(key: key);
-
+class CaptureID extends ConsumerStatefulWidget {
+  const CaptureID({Key? key}) : super(key: key);
   @override
-  ConsumerState<Account> createState() => _AccountState();
+  ConsumerState<CaptureID> createState() => _AccountState();
 }
 
-class _AccountState extends ConsumerState<Account> {
+class _AccountState extends ConsumerState<CaptureID> {
   late CameraController cameraController;
   late List<CameraDescription> cameras;
    late Future<void> _initializeControllerFuture;
@@ -43,6 +42,9 @@ class _AccountState extends ConsumerState<Account> {
 
   @override
   Widget build(BuildContext context) {
+    final kycProgress = ref.watch(kycProgressProvider);
+    final imageFront = ref.watch(imageFrontProvider);
+    final imageBack = ref.watch(imageBackProvider);
     return Scaffold(
       appBar: AppBar(title: const Text('Ocr Test')),
       body: FutureBuilder<void>(
@@ -51,6 +53,14 @@ class _AccountState extends ConsumerState<Account> {
            if(snapshot.connectionState == ConnectionState.done){
             return Stack(
               children: [
+                Positioned(
+                  top: 0,
+                    left: 0,
+                    right: 0,
+                  child: Text(
+                    imageFront == null && imageBack == null? 'ID Front' : imageFront != null && imageBack == null? 'ID Back' : '',
+                    style: const TextStyle(color: Colors.white),
+                    )),
                  Positioned.fill(
                     child: CameraPreview(cameraController),
                   ),
@@ -87,7 +97,7 @@ class _AccountState extends ConsumerState<Account> {
                     right: 0,
                     child: InkWell(
                               onTap: () {
-                                _scanImage();
+                                _scanImage(ref, context);
                               },
                               child: Container(
                                 height: 60,
@@ -120,7 +130,7 @@ class _AccountState extends ConsumerState<Account> {
                             width: 60,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10)),
-                            child: Icon(Icons.image,color: Colors.white,)),
+                            child: const Icon(Icons.image,color: Colors.white,)),
                       ))
 
               ],
@@ -145,9 +155,28 @@ class _AccountState extends ConsumerState<Account> {
     );
   }
   
-  Future<void> _scanImage() async{
+  Future<void> _scanImage(WidgetRef ref, BuildContext context) async{
+    final imageFront = ref.watch(imageFrontProvider);
+    final imageBack = ref.watch(imageBackProvider);
+    if(imageFront == null && imageBack == null){
     final imageCaptured = await cameraController.takePicture(); 
-    ref.read(cardImageProvider.notifier).update((state) => imageCaptured);
+    ref.read(imageFrontProvider.notifier).update((state) => imageCaptured);
+    final inputImage = InputImage.fromFile(File(imageCaptured.path));
+    final textrecognizer = TextRecognizer();
+    final RecognizedText recognizedText = await textrecognizer.processImage(inputImage);
+    var lines = recognizedText.text;
+   Logger().i(lines);
+   debugPrint(lines);
+   var textLines = await extractText(lines);
+   ref.read(surNameProvider.notifier).update((state) => textLines[0]);
+   ref.read(firstNameProvider.notifier).update((state) => textLines[1]);
+   Logger().i(textLines);
+    ref.read(cardDetailsProvider.notifier).update((state) => textLines);
+    } 
+    
+    else if(imageFront != null && imageBack == null){
+    final imageCaptured = await cameraController.takePicture(); 
+    ref.read(imageBackProvider.notifier).update((state) => imageCaptured);
     final inputImage = InputImage.fromFile(File(imageCaptured.path));
     final textrecognizer = TextRecognizer();
     final RecognizedText recognizedText = await textrecognizer.processImage(inputImage);
@@ -155,14 +184,11 @@ class _AccountState extends ConsumerState<Account> {
     var lines = recognizedText.text;
    Logger().i(lines);
    debugPrint(lines);
-  //  List<String> linesList = lines.split('\n');
-  //  for(int i = 0; i< linesList.length; i++){
-  //   Logger().i(linesList[i]);
-  //  }
- var textLines = await extractText(lines);
+   var textLines = await extractText(lines);
  Logger().i(textLines);
-  ref.read(cardDetailsProvider.notifier).update((state) => textLines);
-  // Get.to(const VerifyAccountDetails());
+ ref.read(kycProgressProvider.notifier).update((state) => 1);
+
+    }
 }
 
 Future<void>_pickImage()async{

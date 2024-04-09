@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:groceries/providers/select_country_controller.dart';
 import 'package:groceries/dashboard/dashboard.dart';
+import 'package:groceries/screens/onboarding/onboarding.dart';
 import 'package:groceries/widgets/country_list.dart';
 
 class LoginPage extends StatefulWidget {
@@ -99,6 +100,15 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(color: Colors.black),
                 )),
           ),
+          InkWell(
+            onTap: () {
+              Get.to(const Onboarding());
+            },
+            child: Container(height: 50, width: MediaQuery.of(context).size.width*0.8,
+            decoration:  BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(20)),
+            child: const Center(child:  Text('SignUp', style: TextStyle(color: Colors.white),)),
+            ),
+          )
         ],
       ),
     );
