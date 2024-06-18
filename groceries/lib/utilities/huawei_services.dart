@@ -20,10 +20,6 @@ class HuaweiServices{
 
 
 
-
-
-
-
 void main() {
   runApp(const PushKitDemoApp());
 }

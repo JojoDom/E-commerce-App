@@ -7,13 +7,11 @@ import 'package:groceries/firebase_options.dart';
 import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/categories/fruits.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
-import 'package:groceries/screens/login.dart';
+import 'package:groceries/screens/home/ussd_page.dart';
 import 'package:groceries/theme/themes.dart';
 import 'package:groceries/theme/themes_controller.dart';
 import 'package:groceries/utilities/initializer.dart';
 import 'package:groceries/utilities/messaging_services.dart';
-import 'package:groceries/utilities/firebase_service.dart';
-import 'package:groceries/utilities/huawei_services.dart';
 import 'package:groceries/utilities/routes.dart';
 import 'package:logger/logger.dart';
 
@@ -47,7 +45,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: Routes.FAVORITES, page: () => const Favorites()),
         GetPage(name: Routes.CART, page: () => const Cart())
       ],
-      home: const LoginPage(),
+      home: const USSDRequest(),
     );
   }
 }

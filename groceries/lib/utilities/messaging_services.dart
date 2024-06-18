@@ -13,8 +13,8 @@ Future<String?>getDeviceModel() async {
 
 setUpNotification() async {
   String? deviceModel = await getDeviceModel();
-  if(deviceModel !=null && deviceModel.toLowerCase().contains('huawei')){
-     FirebaseService().notificationSettings();
+  if(deviceModel !=null && deviceModel.toLowerCase().contains('Huawei')){
+   //  FirebaseService().notificationSettings();
     HuaweiServices().initPlatformstate();
   }else{
   FirebaseService().notificationSettings();
