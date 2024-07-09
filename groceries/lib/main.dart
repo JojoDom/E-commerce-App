@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -7,6 +8,7 @@ import 'package:groceries/firebase_options.dart';
 import 'package:groceries/screens/cart/cart.dart';
 import 'package:groceries/screens/categories/fruits.dart';
 import 'package:groceries/screens/favorites/favorites.dart';
+import 'package:groceries/screens/home/autoussd.dart';
 import 'package:groceries/screens/home/ussd_page.dart';
 import 'package:groceries/theme/themes.dart';
 import 'package:groceries/theme/themes_controller.dart';
@@ -27,6 +29,7 @@ void main() async {
 
 final themeController = Get.put(ThemeController());
 var logger = Logger();
+const platform = MethodChannel('groceries.ussd');
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

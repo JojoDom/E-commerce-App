@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/screens/home/my_ussd_advanced.dart';
+import 'package:groceries/screens/home/my_ussd_service.dart';
 import 'package:groceries/screens/home/telephony.dart';
 import 'package:logger/logger.dart';
 import 'package:ussd_service/ussd_service.dart';
@@ -83,7 +84,14 @@ class _USSDRequestState extends State<USSDRequest> {
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: ElevatedButton(onPressed: (){
                   Get.to(const Telefony());
-                }, child: Text('Go to Telephony')),
+                }, child: const Text('Go to Telephony',style: TextStyle(color: Colors.black))),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 30),
+                child: ElevatedButton(onPressed: (){
+                  Get.to(const MyUSSDService());
+                }, child: const Text('Go to My USSD',style: TextStyle(color: Colors.black),)),
               )
       
       ]),

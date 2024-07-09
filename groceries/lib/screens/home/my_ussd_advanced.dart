@@ -19,7 +19,7 @@ class UssdAdvanced {
   static Future<String?> sendAdvancedUssd(
       {required String code, int subscriptionId = 1}) async {
     final String? response = await _channel
-        .invokeMethod('sendAdvancedUssd',
+        .invokeMethod('sendUssd',
             {"subscriptionId": subscriptionId, "code": code})
         .timeout(const Duration(seconds: 30))
         .catchError((e) {
